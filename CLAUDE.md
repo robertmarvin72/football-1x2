@@ -1,8 +1,32 @@
-# CLAUDE.md — 1X2 Football Predictor
+# CLAUDE.md — Football Pools Assistant
 
 ## What this project is
 
-A local JavaScript prototype that predicts 1X2 football match outcomes using a rule-based scoring model. No backend, no build step, no framework. Runs directly in the browser.
+A Football Pools Assistant that uses match prediction as an input to improve coupon construction. No backend, no build step, no framework. Runs directly in the browser.
+
+## Project Mission
+
+Help the user answer:
+- Which matches are safe singles?
+- Which matches need doubles?
+- Which matches deserve triples?
+- Which fixtures are strong draw candidates?
+- Which favourites look vulnerable?
+
+## Success Criteria
+
+Success means:
+- Better coupon recommendations
+- Better draw detection
+- Better upset detection
+- Better identification of uncertainty
+- Improved backtest performance
+
+Success does NOT mean:
+- Maximizing betting ROI
+- Beating bookmakers
+- Predicting exact scores
+- Adding complexity for its own sake
 
 ## Stack
 
@@ -65,6 +89,14 @@ Key weights are in `predictFixture()` in `predict.js`. Do not touch these withou
 
 Any real API adapter must normalize to this shape before passing data to the engine.
 
+## Engineering Principles
+
+- Explainability is more important than complexity.
+- Simpler models are preferred when performance is similar.
+- Every new factor must justify itself through backtesting.
+- Avoid feature creep.
+- The final output should help fill in a coupon.
+
 ## What NOT to do
 
 - Do not add head-to-head history as a primary signal. Current team strength matters more than H2H from 2–3 years ago.
@@ -74,8 +106,11 @@ Any real API adapter must normalize to this shape before passing data to the eng
 
 ## Next priorities (in order)
 
-1. Real API adapter — normalize a provider (football-data.org, API-Football, or Sportmonks) into the canonical shape.
-2. Historical fixture store — save past fixtures as JSON for backtesting.
-3. Backtesting harness — see `NEXT_STEPS.md` for the procedure.
-4. Weight calibration — tune model weights against backtested hit rate.
-5. Odds comparison — map prediction probability to bookmaker implied probability.
+1. Draw candidate detection — improve draw probability signal; surface likely draws prominently in the UI.
+2. Coupon recommendation engine — output a Single / Double (1X, X2, 12) / Triple (1X2) recommendation per fixture.
+3. Upset detection — flag fixtures where the underdog has a meaningful win probability.
+4. Real API adapter — normalize a provider (football-data.org, API-Football, or Sportmonks) into the canonical shape.
+5. Historical fixture store — save past fixtures as JSON for backtesting.
+6. Backtesting harness — see `NEXT_STEPS.md` for the procedure.
+7. Weight calibration — tune model weights against backtested hit rate.
+8. Odds comparison — map prediction probability to bookmaker implied probability.

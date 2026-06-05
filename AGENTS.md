@@ -1,4 +1,27 @@
-# AGENTS.md — 1X2 Football Predictor
+# AGENTS.md — Football Pools Assistant
+
+## Product Goal
+
+This project exists to improve English football pool coupons.
+The primary output is not raw probabilities — it is actionable coupon advice.
+
+For every fixture the system should aim to provide:
+- Predicted outcome (1/X/2)
+- Confidence score
+- Draw probability
+- Upset probability
+- Coupon recommendation: Single / Double (1X, X2, 12) / Triple (1X2)
+
+## Decision-Making Principles
+
+When proposing changes:
+1. Prioritize features that improve coupon construction.
+2. Prioritize draw identification.
+3. Prioritize uncertainty detection.
+4. Prioritize upset detection.
+5. Prefer transparent logic over black-box systems.
+6. Require backtesting evidence before adding prediction factors.
+7. Do not introduce machine learning unless it clearly improves results.
 
 ## Project context for agents
 
@@ -18,6 +41,10 @@ For logic changes to `predictFixture()`, also manually verify:
 - Probabilities are in (0, 1) and sum to 1.
 - Confidence label matches the gap thresholds in `confidenceFromProb()`.
 - The "Why" column contains at least one reason per fixture.
+- Every fixture receives a coupon recommendation.
+- Confidence levels remain sensible across fixtures.
+- Draw candidates are surfaced correctly.
+- High-risk fixtures are clearly identified.
 
 ## Where things live
 
