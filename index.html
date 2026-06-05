@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="is">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>1X2 Football Predictor</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Local JavaScript prototype</p>
+      <h1>1X2 Football Predictor</h1>
+      <p class="subtitle">Rule-based spár fyrir Premier League og Championship, með skýringum.</p>
+    </div>
+    <div class="header-card">
+      <span>V1</span>
+      <strong>No API key needed</strong>
+      <small>Uses demo data first</small>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        League
+        <select id="leagueFilter">
+          <option value="all">All leagues</option>
+        </select>
+      </label>
+
+      <label>
+        Confidence
+        <select id="confidenceFilter">
+          <option value="all">All</option>
+          <option value="High">High only</option>
+          <option value="Medium">Medium+</option>
+        </select>
+      </label>
+
+      <button id="runBtn">Recalculate predictions</button>
+    </section>
+
+    <section class="summary-grid">
+      <article>
+        <span>Total games</span>
+        <strong id="totalGames">0</strong>
+      </article>
+      <article>
+        <span>Top pick</span>
+        <strong id="topPick">-</strong>
+      </article>
+      <article>
+        <span>Average confidence</span>
+        <strong id="avgConfidence">-</strong>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-title">
+        <h2>Predictions</h2>
+        <p>1 = home win, X = draw, 2 = away win</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>League</th>
+              <th>Match</th>
+              <th>1</th>
+              <th>X</th>
+              <th>2</th>
+              <th>Pick</th>
+              <th>Confidence</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody id="predictionRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel two-col">
+      <div>
+        <h2>How this V1 scores</h2>
+        <p>
+          Þetta er ekki AI ennþá. Þetta er gegnsætt rule-based módel sem blandar saman formi,
+          heima/úti styrk, mörkum, varnarleika, stöðu í deild og hvíldardögum.
+        </p>
+      </div>
+      <div class="formula">
+        <code>
+homeScore = form + attack + awayWeakness + homeAdvantage + tableDiff + rest<br>
+awayScore = form + attack + homeWeakness + tableDiff + rest<br>
+drawScore = similarStrength + lowGoalGame + drawRate
+        </code>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
