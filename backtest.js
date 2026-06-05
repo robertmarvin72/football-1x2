@@ -43,7 +43,7 @@ function emptyStats() {
   return { total: 0, correct: 0 };
 }
 
-function printReport({ label, evaluated, skipped, hits, byConf, byPick }) {
+function printReport({ label, evaluated, skipped, hits, byConf, byPick, realDraws }) {
   console.log(`\n${'─'.repeat(60)}`);
   console.log(`Source : ${label}`);
   console.log(`${'─'.repeat(60)}`);
@@ -59,6 +59,10 @@ function printReport({ label, evaluated, skipped, hits, byConf, byPick }) {
   console.log(`  Home (1): ${byPick["1"].correct}/${byPick["1"].total} (${pct(byPick["1"].correct, byPick["1"].total)})`);
   console.log(`  Draw (X): ${byPick["X"].correct}/${byPick["X"].total} (${pct(byPick["X"].correct, byPick["X"].total)})`);
   console.log(`  Away (2): ${byPick["2"].correct}/${byPick["2"].total} (${pct(byPick["2"].correct, byPick["2"].total)})`);
+  console.log('Draw detection:');
+  console.log(`  Real draws in sample    : ${realDraws} / ${evaluated} (${pct(realDraws, evaluated)})`);
+  console.log(`  Draws predicted         : ${byPick["X"].total} / ${evaluated} (${pct(byPick["X"].total, evaluated)})`);
+  console.log(`  Draw hit rate           : ${pct(byPick["X"].correct, byPick["X"].total)}`);
 }
 
 // ── API path helpers ──────────────────────────────────────────────────────────
@@ -145,7 +149,7 @@ function buildHistoricalTeamStats(teamName, priorFixtures, matchDate) {
 
   let totalPts = 0, homePts = 0, awayPts = 0;
   let homeGames = 0, awayGames = 0;
-  let goalsFor = 0, goalsAgainst = 0, draws = 0;
+  let goalsFor = 0, goalsAgainst = 0, draws = 0, homeDraws = 0, awayDraws = 0;
 
   for (const f of teamFixtures) {
     const isHome = f.homeTeam === teamName;
@@ -157,7 +161,11 @@ function buildHistoricalTeamStats(teamName, priorFixtures, matchDate) {
     totalPts += pts;
     goalsFor += gf;
     goalsAgainst += ga;
-    if (outcome === 'D') draws++;
+    if (outcome === 'D') {
+      draws++;
+      if (isHome) homeDraws++;
+      else        awayDraws++;
+    }
     if (isHome) { homePts += pts; homeGames++; }
     else        { awayPts += pts; awayGames++; }
   }
@@ -174,6 +182,8 @@ function buildHistoricalTeamStats(teamName, priorFixtures, matchDate) {
     goalsForPerGame:    goalsFor  / n,
     goalsAgainstPerGame: goalsAgainst / n,
     drawRate:           draws / n,
+    homeDrawRate:       homeGames > 0 ? homeDraws / homeGames : draws / n,
+    awayDrawRate:       awayGames > 0 ? awayDraws / awayGames : draws / n,
     recent,
     restDays
   };
@@ -191,7 +201,7 @@ async function runApiBacktest() {
   console.log(`Fetched ${allFinished.length} completed matches.`);
 
   const idToSlug = buildIdToSlug(allFinished);
-  let evaluated = 0, skipped = 0, hits = 0;
+  let evaluated = 0, skipped = 0, hits = 0, realDraws = 0;
   const byConf = { High: emptyStats(), Medium: emptyStats(), Low: emptyStats() };
   const byPick = { '1': emptyStats(), 'X': emptyStats(), '2': emptyStats() };
 
@@ -228,6 +238,7 @@ async function runApiBacktest() {
     const correct    = prediction.pick === actual;
 
     evaluated++;
+    if (actual === 'X') realDraws++;
     if (correct) hits++;
     byConf[prediction.confidence].total++;
     if (correct) byConf[prediction.confidence].correct++;
@@ -237,7 +248,7 @@ async function runApiBacktest() {
 
   printReport({
     label: `API — ${API_COMPETITION} ${API_SEASON}`,
-    evaluated, skipped, hits, byConf, byPick
+    evaluated, skipped, hits, byConf, byPick, realDraws
   });
 }
 
@@ -252,9 +263,11 @@ async function runHistoricalBacktest({ league, seasons }) {
   allFixtures.sort((a, b) => new Date(a.date) - new Date(b.date));
   console.log(`Loaded ${allFixtures.length} fixtures.`);
 
-  let evaluated = 0, skipped = 0, hits = 0;
+  let evaluated = 0, skipped = 0, hits = 0, realDraws = 0;
   const byConf = { High: emptyStats(), Medium: emptyStats(), Low: emptyStats() };
   const byPick = { '1': emptyStats(), 'X': emptyStats(), '2': emptyStats() };
+  // diagnostic: drawProb → actual draw rate in each 10-bucket
+  const dpBuckets = Array.from({ length: 10 }, () => ({ total: 0, draws: 0 }));
 
   for (const fixture of allFixtures) {
     const matchDate = new Date(fixture.date);
@@ -300,16 +313,31 @@ async function runHistoricalBacktest({ league, seasons }) {
     const correct     = prediction.pick === fixture.result;
 
     evaluated++;
+    if (fixture.result === 'X') realDraws++;
     if (correct) hits++;
     byConf[prediction.confidence].total++;
     if (correct) byConf[prediction.confidence].correct++;
     byPick[prediction.pick].total++;
     if (correct) byPick[prediction.pick].correct++;
+
+    const dp = prediction.probabilities['X'];
+    const bi = Math.min(9, Math.floor(dp * 10));
+    dpBuckets[bi].total++;
+    if (fixture.result === 'X') dpBuckets[bi].draws++;
   }
 
   printReport({
     label: `historical — ${leagueLabel} — ${seasonsLabel}`,
-    evaluated, skipped, hits, byConf, byPick
+    evaluated, skipped, hits, byConf, byPick, realDraws
+  });
+
+  // Signal-quality diagnostic: is drawProb ordinal w.r.t. actual draws?
+  console.log('\nDraw signal diagnostic (actual draw rate by drawProb bucket):');
+  dpBuckets.forEach((b, i) => {
+    const lo = (i * 10).toString().padStart(2, ' ');
+    const hi = ((i + 1) * 10).toString().padStart(2, ' ');
+    const bar = b.total > 0 ? `${b.draws}/${b.total} (${pct(b.draws, b.total)})` : 'n/a';
+    console.log(`  drawProb ${lo}-${hi}%: ${bar}`);
   });
 }
 
