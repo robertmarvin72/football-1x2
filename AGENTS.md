@@ -77,14 +77,35 @@ Edit `demoData` in `app.js`. Both `teams` and `fixtures` arrays. Fixture `home`/
 
 ## Backtesting
 
-`backtest.js` is implemented. Run with `node backtest.js` (requires Node.js 18+).
+`backtest.js` supports two modes.
 
-- Fetches all finished ELC matches for season 2025 from football-data.org.
-- Evaluates each match using only data that was available before that match's date.
-- Requires ≥ 5 prior matches per team; skips earlier fixtures.
-- First run results are in `BACKTEST_RESULTS.md`.
+**API mode** (default) — fetches live finished matches from football-data.org:
+```bash
+node backtest.js
+```
 
-When modifying the model in `predict.js`, re-run the backtest to confirm the hit rate does not regress.
+**Historical mode** — reads local JSON files from `/data/historical/`:
+```bash
+node validateHistoricalData.js                             # always validate first
+node backtest.js --source historical                       # all leagues, all seasons
+node backtest.js --source historical --league PL
+node backtest.js --source historical --league ELC
+node backtest.js --source historical --seasons 2023-24,2024-25
+```
+
+Historical data shape: `/data/historical/{PL|ELC}/{YYYY-YY}.json`
+Season naming: always `YYYY-YY` (e.g. `2024-25`). Never a single year.
+League codes: `PL` (Premier League), `ELC` (Championship). Never `EPL`.
+Five seasons stored: `2020-21` through `2024-25`.
+
+Files currently contain demo data (`"demo": true`). Replace with real match data before drawing conclusions from backtests.
+
+Both modes:
+- Require ≥ 5 prior same-season matches per team before evaluating a fixture.
+- Report hit rate by confidence level (High / Medium / Low) and by predicted outcome (1 / X / 2).
+- Goal is to measure coupon quality improvement, not betting ROI.
+
+When modifying the model in `predict.js`, re-run the backtest to confirm hit rate does not regress.
 
 ## What agents should not do
 

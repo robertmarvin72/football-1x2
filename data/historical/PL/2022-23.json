@@ -1,0 +1,28 @@
+{
+  "demo": true,
+  "league": "PL",
+  "leagueName": "Premier League",
+  "season": "2022-23",
+  "fixtures": [
+    { "id": "PL-2022-23-001", "date": "2022-08-06", "homeTeam": "Team A", "awayTeam": "Team B", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "PL-2022-23-002", "date": "2022-08-06", "homeTeam": "Team C", "awayTeam": "Team D", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "PL-2022-23-003", "date": "2022-08-06", "homeTeam": "Team E", "awayTeam": "Team F", "homeGoals": 3, "awayGoals": 1, "result": "1" },
+    { "id": "PL-2022-23-004", "date": "2022-08-06", "homeTeam": "Team G", "awayTeam": "Team H", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "PL-2022-23-005", "date": "2022-08-06", "homeTeam": "Team I", "awayTeam": "Team J", "homeGoals": 2, "awayGoals": 1, "result": "1" },
+    { "id": "PL-2022-23-006", "date": "2022-08-06", "homeTeam": "Team K", "awayTeam": "Team L", "homeGoals": 0, "awayGoals": 0, "result": "X" },
+    { "id": "PL-2022-23-007", "date": "2022-08-06", "homeTeam": "Team M", "awayTeam": "Team N", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "PL-2022-23-008", "date": "2022-08-06", "homeTeam": "Team O", "awayTeam": "Team P", "homeGoals": 1, "awayGoals": 2, "result": "2" },
+    { "id": "PL-2022-23-009", "date": "2022-08-06", "homeTeam": "Team Q", "awayTeam": "Team R", "homeGoals": 2, "awayGoals": 2, "result": "X" },
+    { "id": "PL-2022-23-010", "date": "2022-08-06", "homeTeam": "Team S", "awayTeam": "Team T", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "PL-2022-23-011", "date": "2022-08-20", "homeTeam": "Team B", "awayTeam": "Team C", "homeGoals": 0, "awayGoals": 0, "result": "X" },
+    { "id": "PL-2022-23-012", "date": "2022-08-20", "homeTeam": "Team D", "awayTeam": "Team E", "homeGoals": 2, "awayGoals": 1, "result": "1" },
+    { "id": "PL-2022-23-013", "date": "2022-08-20", "homeTeam": "Team F", "awayTeam": "Team G", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "PL-2022-23-014", "date": "2022-08-20", "homeTeam": "Team H", "awayTeam": "Team I", "homeGoals": 0, "awayGoals": 2, "result": "2" },
+    { "id": "PL-2022-23-015", "date": "2022-08-20", "homeTeam": "Team J", "awayTeam": "Team K", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "PL-2022-23-016", "date": "2022-08-20", "homeTeam": "Team L", "awayTeam": "Team M", "homeGoals": 3, "awayGoals": 0, "result": "1" },
+    { "id": "PL-2022-23-017", "date": "2022-08-20", "homeTeam": "Team N", "awayTeam": "Team O", "homeGoals": 1, "awayGoals": 2, "result": "2" },
+    { "id": "PL-2022-23-018", "date": "2022-08-20", "homeTeam": "Team P", "awayTeam": "Team Q", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "PL-2022-23-019", "date": "2022-08-20", "homeTeam": "Team R", "awayTeam": "Team S", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "PL-2022-23-020", "date": "2022-08-20", "homeTeam": "Team T", "awayTeam": "Team A", "homeGoals": 1, "awayGoals": 1, "result": "X" }
+  ]
+}

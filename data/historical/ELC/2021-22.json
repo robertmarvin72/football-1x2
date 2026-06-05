@@ -1,0 +1,28 @@
+{
+  "demo": true,
+  "league": "ELC",
+  "leagueName": "Championship",
+  "season": "2021-22",
+  "fixtures": [
+    { "id": "ELC-2021-22-001", "date": "2021-08-14", "homeTeam": "Team A", "awayTeam": "Team B", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-002", "date": "2021-08-14", "homeTeam": "Team C", "awayTeam": "Team D", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2021-22-003", "date": "2021-08-14", "homeTeam": "Team E", "awayTeam": "Team F", "homeGoals": 2, "awayGoals": 1, "result": "1" },
+    { "id": "ELC-2021-22-004", "date": "2021-08-14", "homeTeam": "Team G", "awayTeam": "Team H", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "ELC-2021-22-005", "date": "2021-08-14", "homeTeam": "Team I", "awayTeam": "Team J", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-006", "date": "2021-08-14", "homeTeam": "Team K", "awayTeam": "Team L", "homeGoals": 0, "awayGoals": 0, "result": "X" },
+    { "id": "ELC-2021-22-007", "date": "2021-08-14", "homeTeam": "Team M", "awayTeam": "Team N", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-008", "date": "2021-08-14", "homeTeam": "Team O", "awayTeam": "Team P", "homeGoals": 0, "awayGoals": 2, "result": "2" },
+    { "id": "ELC-2021-22-009", "date": "2021-08-14", "homeTeam": "Team Q", "awayTeam": "Team R", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2021-22-010", "date": "2021-08-14", "homeTeam": "Team S", "awayTeam": "Team T", "homeGoals": 3, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-011", "date": "2021-08-28", "homeTeam": "Team U", "awayTeam": "Team V", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2021-22-012", "date": "2021-08-28", "homeTeam": "Team W", "awayTeam": "Team X", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-013", "date": "2021-08-28", "homeTeam": "Team B", "awayTeam": "Team C", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "ELC-2021-22-014", "date": "2021-08-28", "homeTeam": "Team D", "awayTeam": "Team E", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-015", "date": "2021-08-28", "homeTeam": "Team F", "awayTeam": "Team G", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2021-22-016", "date": "2021-08-28", "homeTeam": "Team H", "awayTeam": "Team I", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2021-22-017", "date": "2021-08-28", "homeTeam": "Team J", "awayTeam": "Team K", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "ELC-2021-22-018", "date": "2021-08-28", "homeTeam": "Team L", "awayTeam": "Team M", "homeGoals": 2, "awayGoals": 1, "result": "1" },
+    { "id": "ELC-2021-22-019", "date": "2021-08-28", "homeTeam": "Team N", "awayTeam": "Team O", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2021-22-020", "date": "2021-08-28", "homeTeam": "Team P", "awayTeam": "Team Q", "homeGoals": 0, "awayGoals": 2, "result": "2" }
+  ]
+}

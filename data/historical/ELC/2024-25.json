@@ -1,0 +1,5020 @@
+{
+  "league": "ELC",
+  "leagueName": "Championship",
+  "season": "2024-25",
+  "fixtures": [
+    {
+      "id": "ELC-2024-25-001",
+      "date": "2024-08-09",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-002",
+      "date": "2024-08-09",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-003",
+      "date": "2024-08-10",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-004",
+      "date": "2024-08-10",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-005",
+      "date": "2024-08-10",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-006",
+      "date": "2024-08-10",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-007",
+      "date": "2024-08-10",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-008",
+      "date": "2024-08-10",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-009",
+      "date": "2024-08-10",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-010",
+      "date": "2024-08-10",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-011",
+      "date": "2024-08-11",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-012",
+      "date": "2024-08-12",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-013",
+      "date": "2024-08-16",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-014",
+      "date": "2024-08-17",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-015",
+      "date": "2024-08-17",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-016",
+      "date": "2024-08-17",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-017",
+      "date": "2024-08-17",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-018",
+      "date": "2024-08-17",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-019",
+      "date": "2024-08-17",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-020",
+      "date": "2024-08-17",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-021",
+      "date": "2024-08-17",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-022",
+      "date": "2024-08-17",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-023",
+      "date": "2024-08-17",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-024",
+      "date": "2024-08-18",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-025",
+      "date": "2024-08-23",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-026",
+      "date": "2024-08-24",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-027",
+      "date": "2024-08-24",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-028",
+      "date": "2024-08-24",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-029",
+      "date": "2024-08-24",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-030",
+      "date": "2024-08-24",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-031",
+      "date": "2024-08-24",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-032",
+      "date": "2024-08-24",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-033",
+      "date": "2024-08-24",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-034",
+      "date": "2024-08-24",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-035",
+      "date": "2024-08-24",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-036",
+      "date": "2024-08-25",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-037",
+      "date": "2024-08-30",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-038",
+      "date": "2024-08-31",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-039",
+      "date": "2024-08-31",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-040",
+      "date": "2024-08-31",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-041",
+      "date": "2024-08-31",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-042",
+      "date": "2024-08-31",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-043",
+      "date": "2024-08-31",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-044",
+      "date": "2024-08-31",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-045",
+      "date": "2024-08-31",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-046",
+      "date": "2024-08-31",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-047",
+      "date": "2024-08-31",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-048",
+      "date": "2024-09-01",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-049",
+      "date": "2024-09-13",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-050",
+      "date": "2024-09-14",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-051",
+      "date": "2024-09-14",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-052",
+      "date": "2024-09-14",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-053",
+      "date": "2024-09-14",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-054",
+      "date": "2024-09-14",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-055",
+      "date": "2024-09-14",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-056",
+      "date": "2024-09-14",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-057",
+      "date": "2024-09-14",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-058",
+      "date": "2024-09-14",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-059",
+      "date": "2024-09-14",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-060",
+      "date": "2024-09-15",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-061",
+      "date": "2024-09-20",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-062",
+      "date": "2024-09-21",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-063",
+      "date": "2024-09-21",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-064",
+      "date": "2024-09-21",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-065",
+      "date": "2024-09-21",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-066",
+      "date": "2024-09-21",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-067",
+      "date": "2024-09-21",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-068",
+      "date": "2024-09-21",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-069",
+      "date": "2024-09-21",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-070",
+      "date": "2024-09-21",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-071",
+      "date": "2024-09-21",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-072",
+      "date": "2024-09-22",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-073",
+      "date": "2024-09-27",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-074",
+      "date": "2024-09-28",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-075",
+      "date": "2024-09-28",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-076",
+      "date": "2024-09-28",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-077",
+      "date": "2024-09-28",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-078",
+      "date": "2024-09-28",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-079",
+      "date": "2024-09-28",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-080",
+      "date": "2024-09-28",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-081",
+      "date": "2024-09-28",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-082",
+      "date": "2024-09-28",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-083",
+      "date": "2024-09-28",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-084",
+      "date": "2024-09-29",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-085",
+      "date": "2024-10-01",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-086",
+      "date": "2024-10-01",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-087",
+      "date": "2024-10-01",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-088",
+      "date": "2024-10-01",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-089",
+      "date": "2024-10-01",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-090",
+      "date": "2024-10-01",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-091",
+      "date": "2024-10-01",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-092",
+      "date": "2024-10-01",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-093",
+      "date": "2024-10-02",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-094",
+      "date": "2024-10-02",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-095",
+      "date": "2024-10-02",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 6,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-096",
+      "date": "2024-10-02",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-097",
+      "date": "2024-10-04",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-098",
+      "date": "2024-10-05",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-099",
+      "date": "2024-10-05",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-100",
+      "date": "2024-10-05",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-101",
+      "date": "2024-10-05",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-102",
+      "date": "2024-10-05",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-103",
+      "date": "2024-10-05",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-104",
+      "date": "2024-10-05",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-105",
+      "date": "2024-10-05",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-106",
+      "date": "2024-10-05",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-107",
+      "date": "2024-10-05",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-108",
+      "date": "2024-10-06",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-109",
+      "date": "2024-10-18",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-110",
+      "date": "2024-10-19",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-111",
+      "date": "2024-10-19",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-112",
+      "date": "2024-10-19",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-113",
+      "date": "2024-10-19",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-114",
+      "date": "2024-10-19",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-115",
+      "date": "2024-10-19",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-116",
+      "date": "2024-10-19",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-117",
+      "date": "2024-10-19",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-118",
+      "date": "2024-10-19",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-119",
+      "date": "2024-10-19",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-120",
+      "date": "2024-10-20",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-121",
+      "date": "2024-10-22",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-122",
+      "date": "2024-10-22",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-123",
+      "date": "2024-10-22",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-124",
+      "date": "2024-10-22",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-125",
+      "date": "2024-10-22",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-126",
+      "date": "2024-10-22",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-127",
+      "date": "2024-10-22",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-128",
+      "date": "2024-10-23",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-129",
+      "date": "2024-10-23",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-130",
+      "date": "2024-10-23",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-131",
+      "date": "2024-10-23",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-132",
+      "date": "2024-10-23",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-133",
+      "date": "2024-10-25",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-134",
+      "date": "2024-10-26",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-135",
+      "date": "2024-10-26",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-136",
+      "date": "2024-10-26",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-137",
+      "date": "2024-10-26",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-138",
+      "date": "2024-10-26",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-139",
+      "date": "2024-10-26",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-140",
+      "date": "2024-10-26",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-141",
+      "date": "2024-10-26",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-142",
+      "date": "2024-10-26",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-143",
+      "date": "2024-10-26",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-144",
+      "date": "2024-10-27",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-145",
+      "date": "2024-11-01",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-146",
+      "date": "2024-11-02",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-147",
+      "date": "2024-11-02",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-148",
+      "date": "2024-11-02",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-149",
+      "date": "2024-11-02",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-150",
+      "date": "2024-11-02",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-151",
+      "date": "2024-11-02",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-152",
+      "date": "2024-11-02",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-153",
+      "date": "2024-11-02",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-154",
+      "date": "2024-11-02",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-155",
+      "date": "2024-11-02",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 6,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-156",
+      "date": "2024-11-03",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-157",
+      "date": "2024-11-05",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-158",
+      "date": "2024-11-05",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-159",
+      "date": "2024-11-05",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-160",
+      "date": "2024-11-05",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-161",
+      "date": "2024-11-05",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-162",
+      "date": "2024-11-05",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-163",
+      "date": "2024-11-06",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-164",
+      "date": "2024-11-06",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-165",
+      "date": "2024-11-06",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-166",
+      "date": "2024-11-06",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-167",
+      "date": "2024-11-06",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-168",
+      "date": "2024-11-07",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-169",
+      "date": "2024-11-08",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-170",
+      "date": "2024-11-09",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-171",
+      "date": "2024-11-09",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-172",
+      "date": "2024-11-09",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-173",
+      "date": "2024-11-09",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-174",
+      "date": "2024-11-09",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-175",
+      "date": "2024-11-09",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-176",
+      "date": "2024-11-09",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-177",
+      "date": "2024-11-09",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-178",
+      "date": "2024-11-10",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-179",
+      "date": "2024-11-10",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-180",
+      "date": "2024-11-10",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-181",
+      "date": "2024-11-22",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-182",
+      "date": "2024-11-23",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-183",
+      "date": "2024-11-23",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-184",
+      "date": "2024-11-23",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-185",
+      "date": "2024-11-23",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-186",
+      "date": "2024-11-23",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-187",
+      "date": "2024-11-23",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 6,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-188",
+      "date": "2024-11-23",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-189",
+      "date": "2024-11-23",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-190",
+      "date": "2024-11-23",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-191",
+      "date": "2024-11-24",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 3,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-192",
+      "date": "2024-11-26",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-193",
+      "date": "2024-11-26",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-194",
+      "date": "2024-11-26",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 6,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-195",
+      "date": "2024-11-26",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-196",
+      "date": "2024-11-26",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-197",
+      "date": "2024-11-26",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-198",
+      "date": "2024-11-26",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-199",
+      "date": "2024-11-27",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-200",
+      "date": "2024-11-27",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-201",
+      "date": "2024-11-27",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-202",
+      "date": "2024-11-27",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-203",
+      "date": "2024-11-29",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-204",
+      "date": "2024-11-30",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-205",
+      "date": "2024-11-30",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-206",
+      "date": "2024-11-30",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-207",
+      "date": "2024-11-30",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-208",
+      "date": "2024-11-30",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-209",
+      "date": "2024-11-30",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-210",
+      "date": "2024-11-30",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-211",
+      "date": "2024-11-30",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-212",
+      "date": "2024-11-30",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-213",
+      "date": "2024-11-30",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-214",
+      "date": "2024-12-01",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-215",
+      "date": "2024-12-06",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-216",
+      "date": "2024-12-07",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-217",
+      "date": "2024-12-07",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-218",
+      "date": "2024-12-07",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-219",
+      "date": "2024-12-07",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-220",
+      "date": "2024-12-07",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-221",
+      "date": "2024-12-07",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-222",
+      "date": "2024-12-07",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-223",
+      "date": "2024-12-07",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-224",
+      "date": "2024-12-08",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-225",
+      "date": "2024-12-10",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-226",
+      "date": "2024-12-10",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-227",
+      "date": "2024-12-10",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-228",
+      "date": "2024-12-10",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-229",
+      "date": "2024-12-10",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-230",
+      "date": "2024-12-10",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-231",
+      "date": "2024-12-10",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-232",
+      "date": "2024-12-11",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-233",
+      "date": "2024-12-11",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-234",
+      "date": "2024-12-11",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-235",
+      "date": "2024-12-11",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-236",
+      "date": "2024-12-11",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-237",
+      "date": "2024-12-13",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-238",
+      "date": "2024-12-14",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-239",
+      "date": "2024-12-14",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-240",
+      "date": "2024-12-14",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-241",
+      "date": "2024-12-14",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-242",
+      "date": "2024-12-14",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-243",
+      "date": "2024-12-14",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-244",
+      "date": "2024-12-14",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-245",
+      "date": "2024-12-14",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-246",
+      "date": "2024-12-14",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-247",
+      "date": "2024-12-15",
+      "homeTeam": "Watford FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-248",
+      "date": "2024-12-15",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-249",
+      "date": "2024-12-20",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-250",
+      "date": "2024-12-21",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-251",
+      "date": "2024-12-21",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-252",
+      "date": "2024-12-21",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-253",
+      "date": "2024-12-21",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-254",
+      "date": "2024-12-21",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-255",
+      "date": "2024-12-21",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-256",
+      "date": "2024-12-21",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-257",
+      "date": "2024-12-21",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-258",
+      "date": "2024-12-21",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-259",
+      "date": "2024-12-21",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-260",
+      "date": "2024-12-22",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-261",
+      "date": "2024-12-26",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-262",
+      "date": "2024-12-26",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-263",
+      "date": "2024-12-26",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-264",
+      "date": "2024-12-26",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-265",
+      "date": "2024-12-26",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-266",
+      "date": "2024-12-26",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-267",
+      "date": "2024-12-26",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-268",
+      "date": "2024-12-26",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-269",
+      "date": "2024-12-26",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-270",
+      "date": "2024-12-26",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-271",
+      "date": "2024-12-26",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-272",
+      "date": "2024-12-26",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-273",
+      "date": "2024-12-29",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-274",
+      "date": "2024-12-29",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-275",
+      "date": "2024-12-29",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-276",
+      "date": "2024-12-29",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-277",
+      "date": "2024-12-29",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-278",
+      "date": "2024-12-29",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-279",
+      "date": "2024-12-29",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-280",
+      "date": "2024-12-29",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-281",
+      "date": "2024-12-29",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-282",
+      "date": "2024-12-29",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-283",
+      "date": "2024-12-29",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-284",
+      "date": "2024-12-29",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-285",
+      "date": "2025-01-01",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-286",
+      "date": "2025-01-01",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-287",
+      "date": "2025-01-01",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-288",
+      "date": "2025-01-01",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-289",
+      "date": "2025-01-01",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-290",
+      "date": "2025-01-01",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-291",
+      "date": "2025-01-01",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-292",
+      "date": "2025-01-01",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-293",
+      "date": "2025-01-01",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-294",
+      "date": "2025-01-01",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-295",
+      "date": "2025-01-01",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-296",
+      "date": "2025-01-01",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-297",
+      "date": "2025-01-04",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-298",
+      "date": "2025-01-04",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-299",
+      "date": "2025-01-04",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-300",
+      "date": "2025-01-04",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-301",
+      "date": "2025-01-04",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-302",
+      "date": "2025-01-04",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-303",
+      "date": "2025-01-04",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-304",
+      "date": "2025-01-04",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-305",
+      "date": "2025-01-04",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-306",
+      "date": "2025-01-04",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-307",
+      "date": "2025-01-05",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-308",
+      "date": "2025-01-06",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-309",
+      "date": "2025-01-14",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-310",
+      "date": "2025-01-14",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-311",
+      "date": "2025-01-15",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-312",
+      "date": "2025-01-17",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-313",
+      "date": "2025-01-18",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-314",
+      "date": "2025-01-18",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-315",
+      "date": "2025-01-18",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-316",
+      "date": "2025-01-18",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-317",
+      "date": "2025-01-18",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-318",
+      "date": "2025-01-18",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-319",
+      "date": "2025-01-18",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-320",
+      "date": "2025-01-18",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-321",
+      "date": "2025-01-18",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-322",
+      "date": "2025-01-18",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-323",
+      "date": "2025-01-19",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-324",
+      "date": "2025-01-21",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-325",
+      "date": "2025-01-21",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-326",
+      "date": "2025-01-21",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-327",
+      "date": "2025-01-21",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-328",
+      "date": "2025-01-21",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-329",
+      "date": "2025-01-21",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-330",
+      "date": "2025-01-21",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-331",
+      "date": "2025-01-21",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-332",
+      "date": "2025-01-22",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-333",
+      "date": "2025-01-22",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-334",
+      "date": "2025-01-22",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-335",
+      "date": "2025-01-22",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-336",
+      "date": "2025-01-24",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-337",
+      "date": "2025-01-25",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-338",
+      "date": "2025-01-25",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-339",
+      "date": "2025-01-25",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-340",
+      "date": "2025-01-25",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-341",
+      "date": "2025-01-25",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-342",
+      "date": "2025-01-25",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-343",
+      "date": "2025-01-25",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-344",
+      "date": "2025-01-25",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-345",
+      "date": "2025-01-25",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-346",
+      "date": "2025-01-25",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-347",
+      "date": "2025-01-27",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-348",
+      "date": "2025-01-28",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-349",
+      "date": "2025-01-31",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-350",
+      "date": "2025-02-01",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-351",
+      "date": "2025-02-01",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-352",
+      "date": "2025-02-01",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-353",
+      "date": "2025-02-01",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-354",
+      "date": "2025-02-01",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-355",
+      "date": "2025-02-01",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 7,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-356",
+      "date": "2025-02-01",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-357",
+      "date": "2025-02-01",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-358",
+      "date": "2025-02-01",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-359",
+      "date": "2025-02-01",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-360",
+      "date": "2025-02-03",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-361",
+      "date": "2025-02-04",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-362",
+      "date": "2025-02-04",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-363",
+      "date": "2025-02-05",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-364",
+      "date": "2025-02-08",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-365",
+      "date": "2025-02-08",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-366",
+      "date": "2025-02-08",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-367",
+      "date": "2025-02-08",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-368",
+      "date": "2025-02-09",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-369",
+      "date": "2025-02-11",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-370",
+      "date": "2025-02-11",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-371",
+      "date": "2025-02-11",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-372",
+      "date": "2025-02-11",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-373",
+      "date": "2025-02-11",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-374",
+      "date": "2025-02-12",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-375",
+      "date": "2025-02-12",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-376",
+      "date": "2025-02-12",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-377",
+      "date": "2025-02-12",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-378",
+      "date": "2025-02-12",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-379",
+      "date": "2025-02-12",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-380",
+      "date": "2025-02-12",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-381",
+      "date": "2025-02-14",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-382",
+      "date": "2025-02-15",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-383",
+      "date": "2025-02-15",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-384",
+      "date": "2025-02-15",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-385",
+      "date": "2025-02-15",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-386",
+      "date": "2025-02-15",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-387",
+      "date": "2025-02-15",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-388",
+      "date": "2025-02-15",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-389",
+      "date": "2025-02-15",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-390",
+      "date": "2025-02-15",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-391",
+      "date": "2025-02-15",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-392",
+      "date": "2025-02-17",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-393",
+      "date": "2025-02-18",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-394",
+      "date": "2025-02-19",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-395",
+      "date": "2025-02-21",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-396",
+      "date": "2025-02-21",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-397",
+      "date": "2025-02-22",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-398",
+      "date": "2025-02-22",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-399",
+      "date": "2025-02-22",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-400",
+      "date": "2025-02-22",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-401",
+      "date": "2025-02-22",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-402",
+      "date": "2025-02-22",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-403",
+      "date": "2025-02-22",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-404",
+      "date": "2025-02-22",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-405",
+      "date": "2025-02-23",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-406",
+      "date": "2025-02-24",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-407",
+      "date": "2025-02-25",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-408",
+      "date": "2025-02-25",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-409",
+      "date": "2025-02-28",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-410",
+      "date": "2025-03-01",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-411",
+      "date": "2025-03-01",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-412",
+      "date": "2025-03-01",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-413",
+      "date": "2025-03-01",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-414",
+      "date": "2025-03-01",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-415",
+      "date": "2025-03-01",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-416",
+      "date": "2025-03-01",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-417",
+      "date": "2025-03-04",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-418",
+      "date": "2025-03-04",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-419",
+      "date": "2025-03-04",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-420",
+      "date": "2025-03-04",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-421",
+      "date": "2025-03-07",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-422",
+      "date": "2025-03-08",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-423",
+      "date": "2025-03-08",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-424",
+      "date": "2025-03-08",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-425",
+      "date": "2025-03-08",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-426",
+      "date": "2025-03-08",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-427",
+      "date": "2025-03-08",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-428",
+      "date": "2025-03-08",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-429",
+      "date": "2025-03-08",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-430",
+      "date": "2025-03-08",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-431",
+      "date": "2025-03-08",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-432",
+      "date": "2025-03-09",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-433",
+      "date": "2025-03-11",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-434",
+      "date": "2025-03-11",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-435",
+      "date": "2025-03-11",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-436",
+      "date": "2025-03-11",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-437",
+      "date": "2025-03-11",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-438",
+      "date": "2025-03-11",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-439",
+      "date": "2025-03-11",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-440",
+      "date": "2025-03-12",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-441",
+      "date": "2025-03-12",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-442",
+      "date": "2025-03-12",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-443",
+      "date": "2025-03-12",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-444",
+      "date": "2025-03-12",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-445",
+      "date": "2025-03-14",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-446",
+      "date": "2025-03-15",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-447",
+      "date": "2025-03-15",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-448",
+      "date": "2025-03-15",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-449",
+      "date": "2025-03-15",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-450",
+      "date": "2025-03-15",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-451",
+      "date": "2025-03-15",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-452",
+      "date": "2025-03-15",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-453",
+      "date": "2025-03-15",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-454",
+      "date": "2025-03-15",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-455",
+      "date": "2025-03-15",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-456",
+      "date": "2025-03-16",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-457",
+      "date": "2025-03-28",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-458",
+      "date": "2025-03-29",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-459",
+      "date": "2025-03-29",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-460",
+      "date": "2025-03-29",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-461",
+      "date": "2025-03-29",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-462",
+      "date": "2025-03-29",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-463",
+      "date": "2025-03-29",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-464",
+      "date": "2025-03-29",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-465",
+      "date": "2025-03-29",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-466",
+      "date": "2025-03-29",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-467",
+      "date": "2025-03-29",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-468",
+      "date": "2025-04-02",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-469",
+      "date": "2025-04-04",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-470",
+      "date": "2025-04-05",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-471",
+      "date": "2025-04-05",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-472",
+      "date": "2025-04-05",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-473",
+      "date": "2025-04-05",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-474",
+      "date": "2025-04-05",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-475",
+      "date": "2025-04-05",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-476",
+      "date": "2025-04-05",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-477",
+      "date": "2025-04-05",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-478",
+      "date": "2025-04-05",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-479",
+      "date": "2025-04-05",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-480",
+      "date": "2025-04-05",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-481",
+      "date": "2025-04-08",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-482",
+      "date": "2025-04-08",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-483",
+      "date": "2025-04-08",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-484",
+      "date": "2025-04-08",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-485",
+      "date": "2025-04-08",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-486",
+      "date": "2025-04-08",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-487",
+      "date": "2025-04-08",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-488",
+      "date": "2025-04-08",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-489",
+      "date": "2025-04-08",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-490",
+      "date": "2025-04-09",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-491",
+      "date": "2025-04-09",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-492",
+      "date": "2025-04-09",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-493",
+      "date": "2025-04-11",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-494",
+      "date": "2025-04-12",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-495",
+      "date": "2025-04-12",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-496",
+      "date": "2025-04-12",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-497",
+      "date": "2025-04-12",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-498",
+      "date": "2025-04-12",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-499",
+      "date": "2025-04-12",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-500",
+      "date": "2025-04-12",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-501",
+      "date": "2025-04-12",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-502",
+      "date": "2025-04-12",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-503",
+      "date": "2025-04-12",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-504",
+      "date": "2025-04-14",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-505",
+      "date": "2025-04-18",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-506",
+      "date": "2025-04-18",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-507",
+      "date": "2025-04-18",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-508",
+      "date": "2025-04-18",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-509",
+      "date": "2025-04-18",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-510",
+      "date": "2025-04-18",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-511",
+      "date": "2025-04-18",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 3,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-512",
+      "date": "2025-04-18",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-513",
+      "date": "2025-04-18",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-514",
+      "date": "2025-04-18",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-515",
+      "date": "2025-04-18",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-516",
+      "date": "2025-04-18",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-517",
+      "date": "2025-04-21",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-518",
+      "date": "2025-04-21",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-519",
+      "date": "2025-04-21",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 6,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-520",
+      "date": "2025-04-21",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-521",
+      "date": "2025-04-21",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-522",
+      "date": "2025-04-21",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-523",
+      "date": "2025-04-21",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-524",
+      "date": "2025-04-21",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-525",
+      "date": "2025-04-21",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-526",
+      "date": "2025-04-21",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-527",
+      "date": "2025-04-21",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-528",
+      "date": "2025-04-21",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-529",
+      "date": "2025-04-25",
+      "homeTeam": "Stoke City FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-530",
+      "date": "2025-04-26",
+      "homeTeam": "Luton Town FC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-531",
+      "date": "2025-04-26",
+      "homeTeam": "Queens Park Rangers FC",
+      "awayTeam": "Burnley FC",
+      "homeGoals": 0,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-532",
+      "date": "2025-04-26",
+      "homeTeam": "Blackburn Rovers FC",
+      "awayTeam": "Watford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-533",
+      "date": "2025-04-26",
+      "homeTeam": "Cardiff City FC",
+      "awayTeam": "West Bromwich Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-534",
+      "date": "2025-04-26",
+      "homeTeam": "Hull City AFC",
+      "awayTeam": "Derby County FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-535",
+      "date": "2025-04-26",
+      "homeTeam": "Middlesbrough FC",
+      "awayTeam": "Norwich City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-536",
+      "date": "2025-04-26",
+      "homeTeam": "Millwall FC",
+      "awayTeam": "Swansea City AFC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-537",
+      "date": "2025-04-26",
+      "homeTeam": "Oxford United FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-538",
+      "date": "2025-04-26",
+      "homeTeam": "Preston North End FC",
+      "awayTeam": "Plymouth Argyle FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-539",
+      "date": "2025-04-26",
+      "homeTeam": "Sheffield Wednesday FC",
+      "awayTeam": "Portsmouth FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-540",
+      "date": "2025-04-28",
+      "homeTeam": "Leeds United FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-541",
+      "date": "2025-05-03",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Preston North End FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-542",
+      "date": "2025-05-03",
+      "homeTeam": "Burnley FC",
+      "awayTeam": "Millwall FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-543",
+      "date": "2025-05-03",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Middlesbrough FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-544",
+      "date": "2025-05-03",
+      "homeTeam": "Derby County FC",
+      "awayTeam": "Stoke City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-545",
+      "date": "2025-05-03",
+      "homeTeam": "Norwich City FC",
+      "awayTeam": "Cardiff City FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-546",
+      "date": "2025-05-03",
+      "homeTeam": "Plymouth Argyle FC",
+      "awayTeam": "Leeds United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-547",
+      "date": "2025-05-03",
+      "homeTeam": "Portsmouth FC",
+      "awayTeam": "Hull City AFC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-548",
+      "date": "2025-05-03",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Blackburn Rovers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-549",
+      "date": "2025-05-03",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Queens Park Rangers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-550",
+      "date": "2025-05-03",
+      "homeTeam": "Swansea City AFC",
+      "awayTeam": "Oxford United FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-551",
+      "date": "2025-05-03",
+      "homeTeam": "Watford FC",
+      "awayTeam": "Sheffield Wednesday FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-552",
+      "date": "2025-05-03",
+      "homeTeam": "West Bromwich Albion FC",
+      "awayTeam": "Luton Town FC",
+      "homeGoals": 5,
+      "awayGoals": 3,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-553",
+      "date": "2025-05-08",
+      "homeTeam": "Bristol City FC",
+      "awayTeam": "Sheffield United FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-554",
+      "date": "2025-05-09",
+      "homeTeam": "Coventry City FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "ELC-2024-25-555",
+      "date": "2025-05-12",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Bristol City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "ELC-2024-25-556",
+      "date": "2025-05-13",
+      "homeTeam": "Sunderland AFC",
+      "awayTeam": "Coventry City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "ELC-2024-25-557",
+      "date": "2025-05-24",
+      "homeTeam": "Sheffield United FC",
+      "awayTeam": "Sunderland AFC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    }
+  ]
+}

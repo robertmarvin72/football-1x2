@@ -1,0 +1,28 @@
+{
+  "demo": true,
+  "league": "ELC",
+  "leagueName": "Championship",
+  "season": "2020-21",
+  "fixtures": [
+    { "id": "ELC-2020-21-001", "date": "2020-09-12", "homeTeam": "Team A", "awayTeam": "Team B", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-002", "date": "2020-09-12", "homeTeam": "Team C", "awayTeam": "Team D", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2020-21-003", "date": "2020-09-12", "homeTeam": "Team E", "awayTeam": "Team F", "homeGoals": 2, "awayGoals": 1, "result": "1" },
+    { "id": "ELC-2020-21-004", "date": "2020-09-12", "homeTeam": "Team G", "awayTeam": "Team H", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "ELC-2020-21-005", "date": "2020-09-12", "homeTeam": "Team I", "awayTeam": "Team J", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-006", "date": "2020-09-12", "homeTeam": "Team K", "awayTeam": "Team L", "homeGoals": 0, "awayGoals": 0, "result": "X" },
+    { "id": "ELC-2020-21-007", "date": "2020-09-12", "homeTeam": "Team M", "awayTeam": "Team N", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-008", "date": "2020-09-12", "homeTeam": "Team O", "awayTeam": "Team P", "homeGoals": 0, "awayGoals": 2, "result": "2" },
+    { "id": "ELC-2020-21-009", "date": "2020-09-12", "homeTeam": "Team Q", "awayTeam": "Team R", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2020-21-010", "date": "2020-09-12", "homeTeam": "Team S", "awayTeam": "Team T", "homeGoals": 3, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-011", "date": "2020-09-26", "homeTeam": "Team U", "awayTeam": "Team V", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2020-21-012", "date": "2020-09-26", "homeTeam": "Team W", "awayTeam": "Team X", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-013", "date": "2020-09-26", "homeTeam": "Team B", "awayTeam": "Team C", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "ELC-2020-21-014", "date": "2020-09-26", "homeTeam": "Team D", "awayTeam": "Team E", "homeGoals": 2, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-015", "date": "2020-09-26", "homeTeam": "Team F", "awayTeam": "Team G", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2020-21-016", "date": "2020-09-26", "homeTeam": "Team H", "awayTeam": "Team I", "homeGoals": 1, "awayGoals": 0, "result": "1" },
+    { "id": "ELC-2020-21-017", "date": "2020-09-26", "homeTeam": "Team J", "awayTeam": "Team K", "homeGoals": 0, "awayGoals": 1, "result": "2" },
+    { "id": "ELC-2020-21-018", "date": "2020-09-26", "homeTeam": "Team L", "awayTeam": "Team M", "homeGoals": 2, "awayGoals": 1, "result": "1" },
+    { "id": "ELC-2020-21-019", "date": "2020-09-26", "homeTeam": "Team N", "awayTeam": "Team O", "homeGoals": 1, "awayGoals": 1, "result": "X" },
+    { "id": "ELC-2020-21-020", "date": "2020-09-26", "homeTeam": "Team P", "awayTeam": "Team Q", "homeGoals": 0, "awayGoals": 2, "result": "2" }
+  ]
+}

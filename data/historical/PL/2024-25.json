@@ -1,0 +1,3427 @@
+{
+  "league": "PL",
+  "leagueName": "Premier League",
+  "season": "2024-25",
+  "fixtures": [
+    {
+      "id": "PL-2024-25-001",
+      "date": "2024-08-16",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-002",
+      "date": "2024-08-17",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-003",
+      "date": "2024-08-17",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-004",
+      "date": "2024-08-17",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-005",
+      "date": "2024-08-17",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-006",
+      "date": "2024-08-17",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-007",
+      "date": "2024-08-17",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-008",
+      "date": "2024-08-18",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-009",
+      "date": "2024-08-18",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-010",
+      "date": "2024-08-19",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-011",
+      "date": "2024-08-24",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-012",
+      "date": "2024-08-24",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-013",
+      "date": "2024-08-24",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-014",
+      "date": "2024-08-24",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-015",
+      "date": "2024-08-24",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-016",
+      "date": "2024-08-24",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-017",
+      "date": "2024-08-24",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-018",
+      "date": "2024-08-25",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-019",
+      "date": "2024-08-25",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 2,
+      "awayGoals": 6,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-020",
+      "date": "2024-08-25",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-021",
+      "date": "2024-08-31",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-022",
+      "date": "2024-08-31",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-023",
+      "date": "2024-08-31",
+      "homeTeam": "Everton FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-024",
+      "date": "2024-08-31",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-025",
+      "date": "2024-08-31",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-026",
+      "date": "2024-08-31",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-027",
+      "date": "2024-08-31",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-028",
+      "date": "2024-09-01",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-029",
+      "date": "2024-09-01",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-030",
+      "date": "2024-09-01",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-031",
+      "date": "2024-09-14",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-032",
+      "date": "2024-09-14",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-033",
+      "date": "2024-09-14",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-034",
+      "date": "2024-09-14",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-035",
+      "date": "2024-09-14",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-036",
+      "date": "2024-09-14",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-037",
+      "date": "2024-09-14",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-038",
+      "date": "2024-09-14",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-039",
+      "date": "2024-09-15",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-040",
+      "date": "2024-09-15",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-041",
+      "date": "2024-09-21",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-042",
+      "date": "2024-09-21",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-043",
+      "date": "2024-09-21",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-044",
+      "date": "2024-09-21",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-045",
+      "date": "2024-09-21",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-046",
+      "date": "2024-09-21",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-047",
+      "date": "2024-09-21",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-048",
+      "date": "2024-09-21",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-049",
+      "date": "2024-09-22",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-050",
+      "date": "2024-09-22",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-051",
+      "date": "2024-09-28",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-052",
+      "date": "2024-09-28",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-053",
+      "date": "2024-09-28",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-054",
+      "date": "2024-09-28",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-055",
+      "date": "2024-09-28",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-056",
+      "date": "2024-09-28",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-057",
+      "date": "2024-09-28",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-058",
+      "date": "2024-09-29",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-059",
+      "date": "2024-09-29",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-060",
+      "date": "2024-09-30",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-061",
+      "date": "2024-10-05",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-062",
+      "date": "2024-10-05",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-063",
+      "date": "2024-10-05",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 5,
+      "awayGoals": 3,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-064",
+      "date": "2024-10-05",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-065",
+      "date": "2024-10-05",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-066",
+      "date": "2024-10-05",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-067",
+      "date": "2024-10-05",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-068",
+      "date": "2024-10-06",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-069",
+      "date": "2024-10-06",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-070",
+      "date": "2024-10-06",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-071",
+      "date": "2024-10-19",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-072",
+      "date": "2024-10-19",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-073",
+      "date": "2024-10-19",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-074",
+      "date": "2024-10-19",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-075",
+      "date": "2024-10-19",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-076",
+      "date": "2024-10-19",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-077",
+      "date": "2024-10-19",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-078",
+      "date": "2024-10-20",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-079",
+      "date": "2024-10-20",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-080",
+      "date": "2024-10-21",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-081",
+      "date": "2024-10-25",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-082",
+      "date": "2024-10-26",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-083",
+      "date": "2024-10-26",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-084",
+      "date": "2024-10-26",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-085",
+      "date": "2024-10-26",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-086",
+      "date": "2024-10-26",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-087",
+      "date": "2024-10-27",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-088",
+      "date": "2024-10-27",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-089",
+      "date": "2024-10-27",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-090",
+      "date": "2024-10-27",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-091",
+      "date": "2024-11-02",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-092",
+      "date": "2024-11-02",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-093",
+      "date": "2024-11-02",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-094",
+      "date": "2024-11-02",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-095",
+      "date": "2024-11-02",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-096",
+      "date": "2024-11-02",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-097",
+      "date": "2024-11-02",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-098",
+      "date": "2024-11-03",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-099",
+      "date": "2024-11-03",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-100",
+      "date": "2024-11-04",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-101",
+      "date": "2024-11-09",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-102",
+      "date": "2024-11-09",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-103",
+      "date": "2024-11-09",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-104",
+      "date": "2024-11-09",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-105",
+      "date": "2024-11-09",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-106",
+      "date": "2024-11-09",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-107",
+      "date": "2024-11-10",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-108",
+      "date": "2024-11-10",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-109",
+      "date": "2024-11-10",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-110",
+      "date": "2024-11-10",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-111",
+      "date": "2024-11-23",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-112",
+      "date": "2024-11-23",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-113",
+      "date": "2024-11-23",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-114",
+      "date": "2024-11-23",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-115",
+      "date": "2024-11-23",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-116",
+      "date": "2024-11-23",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-117",
+      "date": "2024-11-23",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-118",
+      "date": "2024-11-24",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-119",
+      "date": "2024-11-24",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-120",
+      "date": "2024-11-25",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-121",
+      "date": "2024-11-29",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-122",
+      "date": "2024-11-30",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-123",
+      "date": "2024-11-30",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-124",
+      "date": "2024-11-30",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-125",
+      "date": "2024-11-30",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-126",
+      "date": "2024-11-30",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 2,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-127",
+      "date": "2024-12-01",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-128",
+      "date": "2024-12-01",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-129",
+      "date": "2024-12-01",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-130",
+      "date": "2024-12-01",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-131",
+      "date": "2024-12-03",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-132",
+      "date": "2024-12-03",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-133",
+      "date": "2024-12-04",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-134",
+      "date": "2024-12-04",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-135",
+      "date": "2024-12-04",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 3,
+      "awayGoals": 3,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-136",
+      "date": "2024-12-04",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-137",
+      "date": "2024-12-04",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-138",
+      "date": "2024-12-04",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-139",
+      "date": "2024-12-05",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-140",
+      "date": "2024-12-05",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-141",
+      "date": "2024-12-07",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-142",
+      "date": "2024-12-07",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-143",
+      "date": "2024-12-07",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-144",
+      "date": "2024-12-07",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-145",
+      "date": "2024-12-08",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-146",
+      "date": "2024-12-08",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-147",
+      "date": "2024-12-08",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-148",
+      "date": "2024-12-08",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 3,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-149",
+      "date": "2024-12-09",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-150",
+      "date": "2024-12-14",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-151",
+      "date": "2024-12-14",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-152",
+      "date": "2024-12-14",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-153",
+      "date": "2024-12-14",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-154",
+      "date": "2024-12-14",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-155",
+      "date": "2024-12-15",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-156",
+      "date": "2024-12-15",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-157",
+      "date": "2024-12-15",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-158",
+      "date": "2024-12-15",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 0,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-159",
+      "date": "2024-12-16",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-160",
+      "date": "2024-12-21",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-161",
+      "date": "2024-12-21",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-162",
+      "date": "2024-12-21",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-163",
+      "date": "2024-12-21",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-164",
+      "date": "2024-12-21",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-165",
+      "date": "2024-12-22",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-166",
+      "date": "2024-12-22",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-167",
+      "date": "2024-12-22",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-168",
+      "date": "2024-12-22",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-169",
+      "date": "2024-12-22",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 3,
+      "awayGoals": 6,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-170",
+      "date": "2024-12-26",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-171",
+      "date": "2024-12-26",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-172",
+      "date": "2024-12-26",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-173",
+      "date": "2024-12-26",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-174",
+      "date": "2024-12-26",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-175",
+      "date": "2024-12-26",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-176",
+      "date": "2024-12-26",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-177",
+      "date": "2024-12-26",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-178",
+      "date": "2024-12-27",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-179",
+      "date": "2024-12-27",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-180",
+      "date": "2024-12-29",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-181",
+      "date": "2024-12-29",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-182",
+      "date": "2024-12-29",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-183",
+      "date": "2024-12-29",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-184",
+      "date": "2024-12-29",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-185",
+      "date": "2024-12-29",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-186",
+      "date": "2024-12-30",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-187",
+      "date": "2024-12-30",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-188",
+      "date": "2024-12-30",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-189",
+      "date": "2025-01-01",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-190",
+      "date": "2025-01-04",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-191",
+      "date": "2025-01-04",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 5,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-192",
+      "date": "2025-01-04",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-193",
+      "date": "2025-01-04",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-194",
+      "date": "2025-01-04",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-195",
+      "date": "2025-01-04",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-196",
+      "date": "2025-01-04",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-197",
+      "date": "2025-01-05",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-198",
+      "date": "2025-01-05",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-199",
+      "date": "2025-01-06",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-200",
+      "date": "2025-01-14",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-201",
+      "date": "2025-01-14",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-202",
+      "date": "2025-01-14",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-203",
+      "date": "2025-01-14",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-204",
+      "date": "2025-01-15",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-205",
+      "date": "2025-01-15",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-206",
+      "date": "2025-01-15",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-207",
+      "date": "2025-01-15",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-208",
+      "date": "2025-01-16",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-209",
+      "date": "2025-01-16",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-210",
+      "date": "2025-01-18",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-211",
+      "date": "2025-01-18",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-212",
+      "date": "2025-01-18",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-213",
+      "date": "2025-01-18",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-214",
+      "date": "2025-01-18",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-215",
+      "date": "2025-01-19",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-216",
+      "date": "2025-01-19",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-217",
+      "date": "2025-01-19",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-218",
+      "date": "2025-01-19",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 6,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-219",
+      "date": "2025-01-20",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-220",
+      "date": "2025-01-25",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-221",
+      "date": "2025-01-25",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-222",
+      "date": "2025-01-25",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-223",
+      "date": "2025-01-25",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-224",
+      "date": "2025-01-25",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-225",
+      "date": "2025-01-25",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-226",
+      "date": "2025-01-26",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-227",
+      "date": "2025-01-26",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-228",
+      "date": "2025-01-26",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-229",
+      "date": "2025-01-26",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-230",
+      "date": "2025-02-01",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 7,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-231",
+      "date": "2025-02-01",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-232",
+      "date": "2025-02-01",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-233",
+      "date": "2025-02-01",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-234",
+      "date": "2025-02-01",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-235",
+      "date": "2025-02-01",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-236",
+      "date": "2025-02-02",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-237",
+      "date": "2025-02-02",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-238",
+      "date": "2025-02-02",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-239",
+      "date": "2025-02-03",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-240",
+      "date": "2025-02-12",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-241",
+      "date": "2025-02-14",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-242",
+      "date": "2025-02-15",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-243",
+      "date": "2025-02-15",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-244",
+      "date": "2025-02-15",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-245",
+      "date": "2025-02-15",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-246",
+      "date": "2025-02-15",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-247",
+      "date": "2025-02-15",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-248",
+      "date": "2025-02-15",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-249",
+      "date": "2025-02-16",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-250",
+      "date": "2025-02-16",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-251",
+      "date": "2025-02-19",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-252",
+      "date": "2025-02-21",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-253",
+      "date": "2025-02-22",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-254",
+      "date": "2025-02-22",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-255",
+      "date": "2025-02-22",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-256",
+      "date": "2025-02-22",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-257",
+      "date": "2025-02-22",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-258",
+      "date": "2025-02-22",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-259",
+      "date": "2025-02-22",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-260",
+      "date": "2025-02-23",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-261",
+      "date": "2025-02-23",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-262",
+      "date": "2025-02-25",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-263",
+      "date": "2025-02-25",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-264",
+      "date": "2025-02-25",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-265",
+      "date": "2025-02-25",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-266",
+      "date": "2025-02-26",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-267",
+      "date": "2025-02-26",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-268",
+      "date": "2025-02-26",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-269",
+      "date": "2025-02-26",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-270",
+      "date": "2025-02-26",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-271",
+      "date": "2025-02-27",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-272",
+      "date": "2025-03-08",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-273",
+      "date": "2025-03-08",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-274",
+      "date": "2025-03-08",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-275",
+      "date": "2025-03-08",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-276",
+      "date": "2025-03-08",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-277",
+      "date": "2025-03-08",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-278",
+      "date": "2025-03-09",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-279",
+      "date": "2025-03-09",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-280",
+      "date": "2025-03-09",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-281",
+      "date": "2025-03-10",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-282",
+      "date": "2025-03-15",
+      "homeTeam": "Everton FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-283",
+      "date": "2025-03-15",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 2,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-284",
+      "date": "2025-03-15",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-285",
+      "date": "2025-03-15",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-286",
+      "date": "2025-03-15",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-287",
+      "date": "2025-03-16",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-288",
+      "date": "2025-03-16",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-289",
+      "date": "2025-03-16",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-290",
+      "date": "2025-04-01",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-291",
+      "date": "2025-04-01",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-292",
+      "date": "2025-04-01",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-293",
+      "date": "2025-04-02",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-294",
+      "date": "2025-04-02",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-295",
+      "date": "2025-04-02",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-296",
+      "date": "2025-04-02",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-297",
+      "date": "2025-04-02",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-298",
+      "date": "2025-04-02",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-299",
+      "date": "2025-04-03",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-300",
+      "date": "2025-04-05",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-301",
+      "date": "2025-04-05",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-302",
+      "date": "2025-04-05",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-303",
+      "date": "2025-04-05",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-304",
+      "date": "2025-04-05",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-305",
+      "date": "2025-04-06",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-306",
+      "date": "2025-04-06",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-307",
+      "date": "2025-04-06",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-308",
+      "date": "2025-04-06",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-309",
+      "date": "2025-04-07",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-310",
+      "date": "2025-04-12",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 5,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-311",
+      "date": "2025-04-12",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-312",
+      "date": "2025-04-12",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-313",
+      "date": "2025-04-12",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-314",
+      "date": "2025-04-12",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-315",
+      "date": "2025-04-13",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-316",
+      "date": "2025-04-13",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-317",
+      "date": "2025-04-13",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-318",
+      "date": "2025-04-13",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-319",
+      "date": "2025-04-14",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-320",
+      "date": "2025-04-16",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 5,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-321",
+      "date": "2025-04-19",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-322",
+      "date": "2025-04-19",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-323",
+      "date": "2025-04-19",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-324",
+      "date": "2025-04-19",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-325",
+      "date": "2025-04-19",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 4,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-326",
+      "date": "2025-04-20",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-327",
+      "date": "2025-04-20",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-328",
+      "date": "2025-04-20",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-329",
+      "date": "2025-04-20",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-330",
+      "date": "2025-04-21",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-331",
+      "date": "2025-04-22",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-332",
+      "date": "2025-04-23",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-333",
+      "date": "2025-04-26",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-334",
+      "date": "2025-04-26",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-335",
+      "date": "2025-04-26",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-336",
+      "date": "2025-04-26",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-337",
+      "date": "2025-04-26",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-338",
+      "date": "2025-04-27",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-339",
+      "date": "2025-04-27",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-340",
+      "date": "2025-05-01",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-341",
+      "date": "2025-05-02",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-342",
+      "date": "2025-05-03",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-343",
+      "date": "2025-05-03",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-344",
+      "date": "2025-05-03",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-345",
+      "date": "2025-05-03",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-346",
+      "date": "2025-05-04",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 4,
+      "awayGoals": 3,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-347",
+      "date": "2025-05-04",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-348",
+      "date": "2025-05-04",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-349",
+      "date": "2025-05-04",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-350",
+      "date": "2025-05-05",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-351",
+      "date": "2025-05-10",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-352",
+      "date": "2025-05-10",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-353",
+      "date": "2025-05-10",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-354",
+      "date": "2025-05-10",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-355",
+      "date": "2025-05-10",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-356",
+      "date": "2025-05-11",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-357",
+      "date": "2025-05-11",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-358",
+      "date": "2025-05-11",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-359",
+      "date": "2025-05-11",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-360",
+      "date": "2025-05-11",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-361",
+      "date": "2025-05-16",
+      "homeTeam": "Aston Villa FC",
+      "awayTeam": "Tottenham Hotspur FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-362",
+      "date": "2025-05-16",
+      "homeTeam": "Chelsea FC",
+      "awayTeam": "Manchester United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-363",
+      "date": "2025-05-18",
+      "homeTeam": "Everton FC",
+      "awayTeam": "Southampton FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-364",
+      "date": "2025-05-18",
+      "homeTeam": "West Ham United FC",
+      "awayTeam": "Nottingham Forest FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-365",
+      "date": "2025-05-18",
+      "homeTeam": "Brentford FC",
+      "awayTeam": "Fulham FC",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-366",
+      "date": "2025-05-18",
+      "homeTeam": "Leicester City FC",
+      "awayTeam": "Ipswich Town FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-367",
+      "date": "2025-05-18",
+      "homeTeam": "Arsenal FC",
+      "awayTeam": "Newcastle United FC",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-368",
+      "date": "2025-05-19",
+      "homeTeam": "Brighton & Hove Albion FC",
+      "awayTeam": "Liverpool FC",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-369",
+      "date": "2025-05-20",
+      "homeTeam": "Crystal Palace FC",
+      "awayTeam": "Wolverhampton Wanderers FC",
+      "homeGoals": 4,
+      "awayGoals": 2,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-370",
+      "date": "2025-05-20",
+      "homeTeam": "Manchester City FC",
+      "awayTeam": "AFC Bournemouth",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-371",
+      "date": "2025-05-25",
+      "homeTeam": "AFC Bournemouth",
+      "awayTeam": "Leicester City FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-372",
+      "date": "2025-05-25",
+      "homeTeam": "Fulham FC",
+      "awayTeam": "Manchester City FC",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-373",
+      "date": "2025-05-25",
+      "homeTeam": "Ipswich Town FC",
+      "awayTeam": "West Ham United FC",
+      "homeGoals": 1,
+      "awayGoals": 3,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-374",
+      "date": "2025-05-25",
+      "homeTeam": "Liverpool FC",
+      "awayTeam": "Crystal Palace FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    },
+    {
+      "id": "PL-2024-25-375",
+      "date": "2025-05-25",
+      "homeTeam": "Manchester United FC",
+      "awayTeam": "Aston Villa FC",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    },
+    {
+      "id": "PL-2024-25-376",
+      "date": "2025-05-25",
+      "homeTeam": "Newcastle United FC",
+      "awayTeam": "Everton FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-377",
+      "date": "2025-05-25",
+      "homeTeam": "Nottingham Forest FC",
+      "awayTeam": "Chelsea FC",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-378",
+      "date": "2025-05-25",
+      "homeTeam": "Southampton FC",
+      "awayTeam": "Arsenal FC",
+      "homeGoals": 1,
+      "awayGoals": 2,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-379",
+      "date": "2025-05-25",
+      "homeTeam": "Tottenham Hotspur FC",
+      "awayTeam": "Brighton & Hove Albion FC",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "result": "2"
+    },
+    {
+      "id": "PL-2024-25-380",
+      "date": "2025-05-25",
+      "homeTeam": "Wolverhampton Wanderers FC",
+      "awayTeam": "Brentford FC",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "result": "X"
+    }
+  ]
+}

@@ -1,14 +1,67 @@
-// Run with: node backtest.js
-// Requires Node.js 18+ (uses built-in fetch) and package.json "type":"module".
+// Run with: node backtest.js [options]
+// Requires Node.js 18+ and package.json "type":"module".
+//
+// Options:
+//   --source api|historical   default: api
+//   --league PL|ELC           historical only; default: both leagues
+//   --seasons 2023-24,2024-25 historical only; default: all five seasons
+//
+// Examples:
+//   node backtest.js
+//   node backtest.js --source historical
+//   node backtest.js --source historical --league PL
+//   node backtest.js --source historical --league ELC --seasons 2023-24,2024-25
 
 import { apiFetch, buildTeamStats, slugify } from './apiAdapter.js';
 import { predictFixture } from './predict.js';
+import { getRecentHistoricalFixtures } from './historicalData.js';
 
-const COMPETITION = 'ELC';
-const SEASON = '2025';
-const MIN_PRIOR = 5;
+const API_COMPETITION = 'ELC';
+const API_SEASON      = '2025';
+const MIN_PRIOR       = 5;
 
-// ── helpers ──────────────────────────────────────────────────────────────────
+// ── arg parsing ───────────────────────────────────────────────────────────────
+
+function parseArgs(argv) {
+  const result = { source: 'api', league: null, seasons: null };
+  for (let i = 0; i < argv.length; i++) {
+    const flag = argv[i];
+    if (flag === '--source')  result.source  = argv[++i];
+    else if (flag === '--league')  result.league  = argv[++i];
+    else if (flag === '--seasons') result.seasons = argv[++i].split(',').map(s => s.trim());
+  }
+  return result;
+}
+
+// ── shared helpers ────────────────────────────────────────────────────────────
+
+function pct(n, d) {
+  return d > 0 ? `${((n / d) * 100).toFixed(1)}%` : 'n/a';
+}
+
+function emptyStats() {
+  return { total: 0, correct: 0 };
+}
+
+function printReport({ label, evaluated, skipped, hits, byConf, byPick }) {
+  console.log(`\n${'─'.repeat(60)}`);
+  console.log(`Source : ${label}`);
+  console.log(`${'─'.repeat(60)}`);
+  console.log(`Fixtures evaluated        : ${evaluated}`);
+  console.log(`Skipped (< ${MIN_PRIOR} prior)     : ${skipped}`);
+  console.log(`Hit rate                  : ${pct(hits, evaluated)}`);
+  console.log('By confidence:');
+  for (const conf of ['High', 'Medium', 'Low']) {
+    const { correct, total } = byConf[conf];
+    console.log(`  ${conf.padEnd(6)} ${correct}/${total} (${pct(correct, total)})`);
+  }
+  console.log('By predicted outcome:');
+  console.log(`  Home (1): ${byPick["1"].correct}/${byPick["1"].total} (${pct(byPick["1"].correct, byPick["1"].total)})`);
+  console.log(`  Draw (X): ${byPick["X"].correct}/${byPick["X"].total} (${pct(byPick["X"].correct, byPick["X"].total)})`);
+  console.log(`  Away (2): ${byPick["2"].correct}/${byPick["2"].total} (${pct(byPick["2"].correct, byPick["2"].total)})`);
+}
+
+// ── API path helpers ──────────────────────────────────────────────────────────
 
 function buildIdToSlug(matches) {
   const seen = new Map();
@@ -19,8 +72,6 @@ function buildIdToSlug(matches) {
   return new Map([...seen.entries()].map(([id, name]) => [id, slugify(name)]));
 }
 
-// Dynamic league table from matches played before a cutoff date.
-// Returns Map<numericTeamId, position (1-based)>.
 function buildStandings(priorMatches) {
   const pts = new Map();
   for (const m of priorMatches) {
@@ -29,11 +80,11 @@ function buildStandings(priorMatches) {
     if (hg === null || ag === null) continue;
     if (!pts.has(m.homeTeam.id)) pts.set(m.homeTeam.id, 0);
     if (!pts.has(m.awayTeam.id)) pts.set(m.awayTeam.id, 0);
-    if (hg > ag)      pts.set(m.homeTeam.id, pts.get(m.homeTeam.id) + 3);
+    if (hg > ag)       pts.set(m.homeTeam.id, pts.get(m.homeTeam.id) + 3);
     else if (hg === ag) {
       pts.set(m.homeTeam.id, pts.get(m.homeTeam.id) + 1);
       pts.set(m.awayTeam.id, pts.get(m.awayTeam.id) + 1);
-    } else            pts.set(m.awayTeam.id, pts.get(m.awayTeam.id) + 3);
+    } else             pts.set(m.awayTeam.id, pts.get(m.awayTeam.id) + 3);
   }
   const sorted = [...pts.entries()].sort((a, b) => b[1] - a[1]);
   return new Map(sorted.map(([id], i) => [id, i + 1]));
@@ -50,109 +101,230 @@ function priorMatchCount(teamId, priorMatches) {
 function actualOutcome(match) {
   const hg = match.score.fullTime.home;
   const ag = match.score.fullTime.away;
-  if (hg > ag)  return "1";
-  if (hg === ag) return "X";
-  return "2";
+  if (hg > ag)  return '1';
+  if (hg === ag) return 'X';
+  return '2';
 }
 
-function pct(n, d) {
-  return d > 0 ? `${((n / d) * 100).toFixed(1)}%` : 'n/a';
+// ── historical path helpers ───────────────────────────────────────────────────
+
+function buildHistoricalStandings(priorFixtures) {
+  const pts = new Map();
+  for (const f of priorFixtures) {
+    if (!pts.has(f.homeTeam)) pts.set(f.homeTeam, 0);
+    if (!pts.has(f.awayTeam)) pts.set(f.awayTeam, 0);
+    if (f.result === '1')      pts.set(f.homeTeam, pts.get(f.homeTeam) + 3);
+    else if (f.result === 'X') {
+      pts.set(f.homeTeam, pts.get(f.homeTeam) + 1);
+      pts.set(f.awayTeam, pts.get(f.awayTeam) + 1);
+    } else                     pts.set(f.awayTeam, pts.get(f.awayTeam) + 3);
+  }
+  const sorted = [...pts.entries()].sort((a, b) => b[1] - a[1]);
+  return new Map(sorted.map(([name], i) => [name, i + 1]));
 }
 
-// ── main ─────────────────────────────────────────────────────────────────────
+function historicalOutcome(fixture, teamName) {
+  const isHome = fixture.homeTeam === teamName;
+  if (fixture.result === 'X') return 'D';
+  if (fixture.result === '1') return isHome ? 'W' : 'L';
+  return isHome ? 'L' : 'W';
+}
 
-async function main() {
-  console.log(`Fetching finished ${COMPETITION} ${SEASON} matches…`);
-  const raw = await apiFetch(`/competitions/${COMPETITION}/matches?status=FINISHED&season=${SEASON}`);
+function buildHistoricalTeamStats(teamName, priorFixtures, matchDate) {
+  const teamFixtures = priorFixtures
+    .filter(f => f.homeTeam === teamName || f.awayTeam === teamName)
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  if (teamFixtures.length === 0) {
+    return {
+      pointsPerGame: 0, homePointsPerGame: 0, awayPointsPerGame: 0,
+      goalsForPerGame: 0, goalsAgainstPerGame: 0, drawRate: 0,
+      recent: [], restDays: 0
+    };
+  }
+
+  let totalPts = 0, homePts = 0, awayPts = 0;
+  let homeGames = 0, awayGames = 0;
+  let goalsFor = 0, goalsAgainst = 0, draws = 0;
+
+  for (const f of teamFixtures) {
+    const isHome = f.homeTeam === teamName;
+    const gf = isHome ? f.homeGoals : f.awayGoals;
+    const ga = isHome ? f.awayGoals : f.homeGoals;
+    const outcome = historicalOutcome(f, teamName);
+    const pts = outcome === 'W' ? 3 : outcome === 'D' ? 1 : 0;
+
+    totalPts += pts;
+    goalsFor += gf;
+    goalsAgainst += ga;
+    if (outcome === 'D') draws++;
+    if (isHome) { homePts += pts; homeGames++; }
+    else        { awayPts += pts; awayGames++; }
+  }
+
+  const n = teamFixtures.length;
+  const recent = teamFixtures.slice(-6).map(f => historicalOutcome(f, teamName));
+  const lastDate = new Date(teamFixtures[teamFixtures.length - 1].date);
+  const restDays = Math.round((matchDate - lastDate) / 86_400_000);
+
+  return {
+    pointsPerGame:      totalPts / n,
+    homePointsPerGame:  homeGames > 0 ? homePts / homeGames : 0,
+    awayPointsPerGame:  awayGames > 0 ? awayPts / awayGames : 0,
+    goalsForPerGame:    goalsFor  / n,
+    goalsAgainstPerGame: goalsAgainst / n,
+    drawRate:           draws / n,
+    recent,
+    restDays
+  };
+}
+
+// ── API backtest ──────────────────────────────────────────────────────────────
+
+async function runApiBacktest() {
+  console.log(`Fetching finished ${API_COMPETITION} ${API_SEASON} matches…`);
+  const raw = await apiFetch(`/competitions/${API_COMPETITION}/matches?status=FINISHED&season=${API_SEASON}`);
   const allFinished = raw.matches
     .filter(m => m.score.fullTime.home !== null && m.score.fullTime.away !== null)
     .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
 
-  console.log(`Fetched ${allFinished.length} completed matches.\n`);
+  console.log(`Fetched ${allFinished.length} completed matches.`);
 
   const idToSlug = buildIdToSlug(allFinished);
-
-  let evaluated = 0;
-  let skipped   = 0;
-  let hits      = 0;
-
-  const byConf = {
-    High:   { total: 0, correct: 0 },
-    Medium: { total: 0, correct: 0 },
-    Low:    { total: 0, correct: 0 }
-  };
-  const byPick = {
-    "1": { total: 0, correct: 0 },
-    "X": { total: 0, correct: 0 },
-    "2": { total: 0, correct: 0 }
-  };
+  let evaluated = 0, skipped = 0, hits = 0;
+  const byConf = { High: emptyStats(), Medium: emptyStats(), Low: emptyStats() };
+  const byPick = { '1': emptyStats(), 'X': emptyStats(), '2': emptyStats() };
 
   for (const match of allFinished) {
     const homeId = match.homeTeam.id;
     const awayId = match.awayTeam.id;
-
     if (!idToSlug.has(homeId) || !idToSlug.has(awayId)) { skipped++; continue; }
 
-    const matchDate   = new Date(match.utcDate);
+    const matchDate    = new Date(match.utcDate);
     const priorMatches = allFinished.filter(m => new Date(m.utcDate) < matchDate);
 
     if (priorMatchCount(homeId, priorMatches) < MIN_PRIOR ||
-        priorMatchCount(awayId, priorMatches) < MIN_PRIOR) {
-      skipped++;
-      continue;
-    }
+        priorMatchCount(awayId, priorMatches) < MIN_PRIOR) { skipped++; continue; }
 
-    const posMap   = buildStandings(priorMatches);
-    const homeSlug = idToSlug.get(homeId);
-    const awaySlug = idToSlug.get(awayId);
+    const posMap    = buildStandings(priorMatches);
+    const homeSlug  = idToSlug.get(homeId);
+    const awaySlug  = idToSlug.get(awayId);
 
     const homeTeam = {
-      id:       homeSlug,
-      name:     match.homeTeam.shortName || match.homeTeam.name,
-      league:   'Championship',
-      position: posMap.get(homeId) ?? 12,
+      id: homeSlug, name: match.homeTeam.shortName || match.homeTeam.name,
+      league: 'Championship', position: posMap.get(homeId) ?? 12,
       ...buildTeamStats(homeId, priorMatches, matchDate)
     };
     const awayTeam = {
-      id:       awaySlug,
-      name:     match.awayTeam.shortName || match.awayTeam.name,
-      league:   'Championship',
-      position: posMap.get(awayId) ?? 12,
+      id: awaySlug, name: match.awayTeam.shortName || match.awayTeam.name,
+      league: 'Championship', position: posMap.get(awayId) ?? 12,
       ...buildTeamStats(awayId, priorMatches, matchDate)
     };
 
-    const fixture  = { id: match.id, league: 'Championship', home: homeSlug, away: awaySlug };
-    const teamById = { [homeSlug]: homeTeam, [awaySlug]: awayTeam };
-
+    const fixture   = { id: match.id, league: 'Championship', home: homeSlug, away: awaySlug };
+    const teamById  = { [homeSlug]: homeTeam, [awaySlug]: awayTeam };
     const prediction = predictFixture(fixture, teamById);
     const actual     = actualOutcome(match);
     const correct    = prediction.pick === actual;
 
     evaluated++;
     if (correct) hits++;
-
     byConf[prediction.confidence].total++;
     if (correct) byConf[prediction.confidence].correct++;
-
     byPick[prediction.pick].total++;
     if (correct) byPick[prediction.pick].correct++;
   }
 
-  // ── report ────────────────────────────────────────────────────────────────
-  console.log(`Total fixtures evaluated: ${evaluated}`);
-  console.log(`Skipped (insufficient data): ${skipped}`);
-  console.log(`Hit rate: ${pct(hits, evaluated)} (correct 1/X/2)`);
-  console.log('By confidence:');
-  console.log(`  High:   ${byConf.High.correct}/${byConf.High.total} (${pct(byConf.High.correct, byConf.High.total)})`);
-  console.log(`  Medium: ${byConf.Medium.correct}/${byConf.Medium.total} (${pct(byConf.Medium.correct, byConf.Medium.total)})`);
-  console.log(`  Low:    ${byConf.Low.correct}/${byConf.Low.total} (${pct(byConf.Low.correct, byConf.Low.total)})`);
-  console.log('By outcome type:');
-  console.log(`  Home wins predicted: ${byPick["1"].correct}/${byPick["1"].total} (${pct(byPick["1"].correct, byPick["1"].total)})`);
-  console.log(`  Draws predicted:     ${byPick["X"].correct}/${byPick["X"].total} (${pct(byPick["X"].correct, byPick["X"].total)})`);
-  console.log(`  Away wins predicted: ${byPick["2"].correct}/${byPick["2"].total} (${pct(byPick["2"].correct, byPick["2"].total)})`);
+  printReport({
+    label: `API — ${API_COMPETITION} ${API_SEASON}`,
+    evaluated, skipped, hits, byConf, byPick
+  });
 }
 
-main().catch(err => {
-  console.error('Backtest failed:', err.message);
-  process.exit(1);
-});
+// ── historical backtest ───────────────────────────────────────────────────────
+
+async function runHistoricalBacktest({ league, seasons }) {
+  const leagueLabel   = league   || 'PL + ELC';
+  const seasonsLabel  = seasons  ? seasons.join(', ') : 'all five seasons';
+  console.log(`Loading historical data — league: ${leagueLabel}, seasons: ${seasonsLabel}…`);
+
+  const allFixtures = await getRecentHistoricalFixtures({ league, seasons });
+  allFixtures.sort((a, b) => new Date(a.date) - new Date(b.date));
+  console.log(`Loaded ${allFixtures.length} fixtures.`);
+
+  let evaluated = 0, skipped = 0, hits = 0;
+  const byConf = { High: emptyStats(), Medium: emptyStats(), Low: emptyStats() };
+  const byPick = { '1': emptyStats(), 'X': emptyStats(), '2': emptyStats() };
+
+  for (const fixture of allFixtures) {
+    const matchDate = new Date(fixture.date);
+
+    // Prior fixtures: same league, same season, earlier date.
+    // Same-season scope matches real-world usage: teams start fresh each season.
+    const priorFixtures = allFixtures.filter(
+      f => new Date(f.date) < matchDate
+        && f.league  === fixture.league
+        && f.season  === fixture.season
+    );
+
+    const homeCount = priorFixtures.filter(
+      f => f.homeTeam === fixture.homeTeam || f.awayTeam === fixture.homeTeam
+    ).length;
+    const awayCount = priorFixtures.filter(
+      f => f.homeTeam === fixture.awayTeam || f.awayTeam === fixture.awayTeam
+    ).length;
+
+    if (homeCount < MIN_PRIOR || awayCount < MIN_PRIOR) { skipped++; continue; }
+
+    const standings = buildHistoricalStandings(priorFixtures);
+    const homeStats = buildHistoricalTeamStats(fixture.homeTeam, priorFixtures, matchDate);
+    const awayStats = buildHistoricalTeamStats(fixture.awayTeam, priorFixtures, matchDate);
+
+    const homeSlug = slugify(fixture.homeTeam);
+    const awaySlug = slugify(fixture.awayTeam);
+
+    const homeTeam = {
+      id: homeSlug, name: fixture.homeTeam, league: fixture.leagueName,
+      position: standings.get(fixture.homeTeam) ?? 12,
+      ...homeStats
+    };
+    const awayTeam = {
+      id: awaySlug, name: fixture.awayTeam, league: fixture.leagueName,
+      position: standings.get(fixture.awayTeam) ?? 12,
+      ...awayStats
+    };
+
+    const predFixture = { id: fixture.id, league: fixture.leagueName, home: homeSlug, away: awaySlug };
+    const teamById    = { [homeSlug]: homeTeam, [awaySlug]: awayTeam };
+    const prediction  = predictFixture(predFixture, teamById);
+    const correct     = prediction.pick === fixture.result;
+
+    evaluated++;
+    if (correct) hits++;
+    byConf[prediction.confidence].total++;
+    if (correct) byConf[prediction.confidence].correct++;
+    byPick[prediction.pick].total++;
+    if (correct) byPick[prediction.pick].correct++;
+  }
+
+  printReport({
+    label: `historical — ${leagueLabel} — ${seasonsLabel}`,
+    evaluated, skipped, hits, byConf, byPick
+  });
+}
+
+// ── entry point ───────────────────────────────────────────────────────────────
+
+const args = parseArgs(process.argv.slice(2));
+
+if (args.source === 'historical') {
+  runHistoricalBacktest(args).catch(err => {
+    console.error('Historical backtest failed:', err.message);
+    process.exit(1);
+  });
+} else {
+  runApiBacktest().catch(err => {
+    console.error('API backtest failed:', err.message);
+    process.exit(1);
+  });
+}

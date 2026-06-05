@@ -41,17 +41,82 @@ npx serve .
 # or just open index.html in a browser
 ```
 
+## Historical data
+
+Location: `/data/historical/{league}/{season}.json`
+
+Leagues covered (use these codes everywhere — CLI args, folder names, JSON fields):
+
+| League           | Code | football-data.org code |
+|------------------|------|------------------------|
+| Premier League   | PL   | PL                     |
+| Championship     | ELC  | ELC                    |
+
+Do not use "EPL". The code `PL` must match what `apiAdapter.js` uses to avoid mismatches.
+
+Seasons: always `YYYY-YY` format — English seasons span two calendar years.
+Five seasons are stored: `2020-21`, `2021-22`, `2022-23`, `2023-24`, `2024-25`.
+
+Why five seasons only: football teams change managers, owners, squads, and playing styles over time. Data older than five seasons has diminishing predictive value for coupon decisions and risks encoding stale signals.
+
+**Current state:** All ten files (`PL` × 5, `ELC` × 5) contain clearly marked demo data (`"demo": true`) with fake team names ("Team A", "Team B", …). Replace with real match data before meaningful backtesting.
+
+### Canonical JSON shape
+
+```json
+{
+  "league": "PL",
+  "leagueName": "Premier League",
+  "season": "2024-25",
+  "fixtures": [
+    {
+      "id": "PL-2024-25-001",
+      "date": "2024-08-16",
+      "homeTeam": "Arsenal",
+      "awayTeam": "Wolves",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "result": "1"
+    }
+  ]
+}
+```
+
+Rules:
+- `result` is `"1"` (home win), `"X"` (draw), or `"2"` (away win) — must match the goals
+- `homeGoals` / `awayGoals` are integers
+- `date` is `YYYY-MM-DD`
+- `id` is `{league}-{season}-{zero-padded 3-digit index}`
+- Demo files add `"demo": true` at the top level
+
+### Running backtests against historical data
+
+```bash
+node validateHistoricalData.js                           # validate all files first
+node backtest.js --source historical                     # all leagues, all seasons
+node backtest.js --source historical --league PL         # Premier League only
+node backtest.js --source historical --league ELC        # Championship only
+node backtest.js --source historical --seasons 2023-24,2024-25
+node backtest.js                                         # original API backtest (unchanged)
+```
+
+Historical data supports coupon quality improvement — it is not used to measure betting ROI.
+
 ## File map
 
-| File                   | Purpose                                                      |
-| ---------------------- | ------------------------------------------------------------ |
-| `app.js`               | Demo data, rendering, filter state, startup fetch            |
-| `predict.js`           | Pure prediction engine (no DOM) — imported by app.js and backtest.js |
-| `apiAdapter.js`        | football-data.org adapter — normalises to canonical shape    |
-| `backtest.js`          | Node.js backtest harness — run with `node backtest.js`       |
-| `index.html`           | UI shell                                                     |
-| `style.css`            | All styles                                                   |
-| `package.json`         | `"type":"module"` only — enables ES imports in Node.js       |
+| File                        | Purpose                                                                  |
+| --------------------------- | ------------------------------------------------------------------------ |
+| `app.js`                    | Demo data, rendering, filter state, startup fetch                        |
+| `predict.js`                | Pure prediction engine (no DOM) — imported by app.js and backtest.js     |
+| `apiAdapter.js`             | football-data.org adapter — normalises to canonical shape                |
+| `backtest.js`               | Node.js backtest harness — API and historical modes                      |
+| `historicalData.js`         | Loader for /data/historical/ JSON files; works in Node.js and browser    |
+| `validateHistoricalData.js` | Validates all historical JSON files — run before backtesting             |
+| `index.html`                | UI shell                                                                 |
+| `style.css`                 | All styles                                                               |
+| `package.json`              | `"type":"module"` only — enables ES imports in Node.js                   |
+| `data/historical/PL/`       | Premier League season files (2020-21 … 2024-25)                         |
+| `data/historical/ELC/`      | Championship season files (2020-21 … 2024-25)                           |
 
 ## Prediction model (current)
 
