@@ -156,6 +156,9 @@ async function fetchCompetition(competition) {
     .map((m) => ({
       id: m.id,
       league: competition.name,
+      leagueCode: competition.code,
+      matchday: m.matchday ?? null,
+      date: m.utcDate ? m.utcDate.slice(0, 10) : null,
       home: idToSlug.get(m.homeTeam.id),
       away: idToSlug.get(m.awayTeam.id),
     }));
