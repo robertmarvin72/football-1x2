@@ -1,3 +1,36 @@
+// ── Confidence / grading helpers ─────────────────────────────────────────────
+// These operate on raw probabilities and are independent of predictFixture().
+// They are used by backtestConfidence.js and can feed a future UI grade badge.
+
+// Simple argmax on the three outcome probabilities.
+// Note: predictFixture() applies a draw-pick threshold for coupon purposes;
+// this function returns the pure probability winner.
+export function getPredictedOutcome(homeProb, drawProb, awayProb) {
+  if (drawProb >= homeProb && drawProb >= awayProb) return 'X';
+  if (homeProb >= awayProb) return '1';
+  return '2';
+}
+
+// Composite confidence score in the range [0, 100].
+// Formula: (highestProb * 0.7) + (margin * 0.3), scaled to integer percent.
+// The margin term rewards decisive gaps over flat probability distributions.
+export function getPredictionConfidence(homeProb, drawProb, awayProb) {
+  const sorted = [homeProb, drawProb, awayProb].sort((a, b) => b - a);
+  const margin = sorted[0] - sorted[1];
+  return Math.round((sorted[0] * 0.7 + margin * 0.3) * 100);
+}
+
+// Letter grade based on confidence score.
+export function getPredictionGrade(confidence) {
+  if (confidence >= 80) return 'A+';
+  if (confidence >= 70) return 'A';
+  if (confidence >= 60) return 'B';
+  if (confidence >= 50) return 'C';
+  return 'D';
+}
+
+// ── Core prediction helpers ───────────────────────────────────────────────────
+
 export function resultPoints(result) {
   if (result === "W") return 3;
   if (result === "D") return 1;

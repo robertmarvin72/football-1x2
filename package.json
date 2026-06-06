@@ -1,3 +1,7 @@
 {
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "backtest:confidence": "node backtestConfidence.js",
+    "test:predictions": "node backtestConfidence.js"
+  }
 }
