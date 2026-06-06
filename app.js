@@ -1,5 +1,5 @@
 import { fetchFootballData } from './apiAdapter.js';
-import { predictFixture } from './predict.js';
+import { predictFixture, confidenceFromProb } from './predict.js';
 
 const demoData = {
   teams: [
@@ -114,10 +114,19 @@ function passesFilters(prediction) {
   return true;
 }
 
-function render() {
-  const predictions = appData.fixtures.map(f => predictFixture(f, teamById)).filter(passesFilters);
+// ── shared renderer ───────────────────────────────────────────────────────────
+
+function renderPredictions(predictions) {
   const tbody = document.querySelector("#predictionRows");
   tbody.innerHTML = "";
+
+  if (predictions.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No predictions match the current filters.</td></tr>';
+    document.querySelector("#totalGames").textContent = "0";
+    document.querySelector("#topPick").textContent = "-";
+    document.querySelector("#avgConfidence").textContent = "-";
+    return;
+  }
 
   predictions.forEach(prediction => {
     const row = document.createElement("tr");
@@ -147,6 +156,100 @@ function render() {
   document.querySelector("#avgConfidence").textContent = predictions.length ? formatPercent(avg) : "-";
 }
 
+function setDataSource(text) {
+  const el = document.querySelector("#dataSource");
+  if (!text) { el.hidden = true; return; }
+  el.textContent = text;
+  el.hidden = false;
+}
+
+// ── live render ───────────────────────────────────────────────────────────────
+
+function render() {
+  const predictions = appData.fixtures.map(f => predictFixture(f, teamById)).filter(passesFilters);
+  renderPredictions(predictions);
+  setDataSource(null);
+}
+
+// ── saved predictions loader ──────────────────────────────────────────────────
+
+// Reconstruct { '1', 'X', '2' } probability map from the predictions.json shape.
+function reconstructProbs(saved) {
+  const top   = saved.confidence;      // topProbability stored as float
+  const drawP = saved.drawProbability;
+  const upset = saved.upsetProbability;
+
+  if (saved.predictedOutcome === '1') return { '1': top,  'X': drawP, '2': upset };
+  if (saved.predictedOutcome === '2') return { '1': upset, 'X': drawP, '2': top  };
+  // 'X' pick: drawP is the highest. Remaining split between home/away is unknown,
+  // so display as equal halves — the pick and draw% already carry the key info.
+  const half = Math.max(0, 1 - drawP) / 2;
+  return { '1': half, 'X': drawP, '2': half };
+}
+
+// Derive the categorical confidence label from a saved fixture's stored floats.
+function savedConfidenceLabel(saved) {
+  const top    = saved.confidence;
+  const second = saved.predictedOutcome === 'X'
+    ? saved.upsetProbability
+    : Math.max(saved.drawProbability, saved.upsetProbability);
+  return confidenceFromProb(top, second);
+}
+
+// Adapt a predictions.json fixture entry to the shape renderPredictions() expects.
+function transformSaved(saved) {
+  const probs = reconstructProbs(saved);
+  const conf  = savedConfidenceLabel(saved);
+  return {
+    fixture:        { league: saved.league },
+    home:           { name: saved.homeTeam },
+    away:           { name: saved.awayTeam },
+    probabilities:  probs,
+    pick:           saved.predictedOutcome,
+    confidence:     conf,
+    topProbability: saved.confidence,
+    reasons:        [saved.couponRecommendation],
+  };
+}
+
+async function loadSavedPredictions() {
+  const tbody = document.querySelector("#predictionRows");
+
+  try {
+    const res = await fetch('./predictions.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    const fixtures = Array.isArray(data.fixtures) ? data.fixtures : [];
+    if (fixtures.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="8" class="empty-state">'
+        + 'No saved predictions found. Run: <code>node generatePredictions.js</code>'
+        + '</td></tr>';
+      setDataSource(null);
+      document.querySelector("#totalGames").textContent = "0";
+      document.querySelector("#topPick").textContent = "-";
+      document.querySelector("#avgConfidence").textContent = "-";
+      return;
+    }
+
+    const predictions = fixtures.map(transformSaved);
+    renderPredictions(predictions);
+
+    const generated = data.generated
+      ? new Date(data.generated).toLocaleString()
+      : "unknown";
+    setDataSource(`Saved predictions · Generated ${generated}`);
+  } catch {
+    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">'
+      + 'No saved predictions found. Run: <code>node generatePredictions.js</code>'
+      + '</td></tr>';
+    setDataSource(null);
+    document.querySelector("#totalGames").textContent = "0";
+    document.querySelector("#topPick").textContent = "-";
+    document.querySelector("#avgConfidence").textContent = "-";
+  }
+}
+
 function initFilters() {
   const leagueFilter = document.querySelector("#leagueFilter");
   const leagues = [...new Set(appData.fixtures.map(fixture => fixture.league))];
@@ -173,6 +276,8 @@ function initFilters() {
     teamById = Object.fromEntries(appData.teams.map(t => [t.id, t]));
     render();
   });
+
+  document.querySelector("#loadSavedBtn").addEventListener("click", loadSavedPredictions);
 }
 
 (async () => {

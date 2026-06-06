@@ -39,6 +39,7 @@
       </label>
 
       <button id="runBtn">Recalculate predictions</button>
+      <button id="loadSavedBtn" class="secondary">Load saved predictions</button>
     </section>
 
     <section class="summary-grid">
@@ -59,7 +60,10 @@
     <section class="panel">
       <div class="panel-title">
         <h2>Predictions</h2>
-        <p>1 = home win, X = draw, 2 = away win</p>
+        <div class="panel-title-right">
+          <p>1 = home win, X = draw, 2 = away win</p>
+          <span id="dataSource" class="data-source" hidden></span>
+        </div>
       </div>
       <div class="table-wrap">
         <table>

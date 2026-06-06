@@ -103,6 +103,16 @@ button {
   font-weight: 800;
 }
 
+button.secondary {
+  background: white;
+  color: #102033;
+  border-color: #cbd7e5;
+}
+
+button.secondary:hover {
+  background: #f3f6fb;
+}
+
 .summary-grid {
   margin: 18px 0;
   display: grid;
@@ -143,6 +153,23 @@ button {
   align-items: end;
   gap: 16px;
   margin-bottom: 12px;
+}
+
+.panel-title-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.data-source {
+  font-size: 12px;
+  font-weight: 600;
+  color: #52657a;
+  background: #eef3f8;
+  border: 1px solid #dfe7f1;
+  border-radius: 999px;
+  padding: 3px 10px;
 }
 
 .panel h2 {
@@ -212,6 +239,12 @@ td {
 .why {
   color: #40536a;
   max-width: 360px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px 16px;
+  color: #52657a;
 }
 
 .two-col {
