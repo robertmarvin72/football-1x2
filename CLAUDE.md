@@ -122,9 +122,77 @@ Historical data supports coupon quality improvement — it is not used to measur
 
 Inputs per team: `pointsPerGame`, `homePointsPerGame`, `awayPointsPerGame`, `goalsForPerGame`, `goalsAgainstPerGame`, `drawRate`, `position`, `restDays`, `recent` (last N results).
 
-Three scores are computed (home, away, draw), passed through softmax to get probabilities. Confidence is derived from the gap between top and second outcome.
+Three scores are computed (home, away, draw), passed through softmax to get probabilities. Confidence is assigned as an A+/A/B/C/D grade derived from the gap between the top and second outcome probabilities — see **Confidence grading** below.
 
 Key weights are in `predictFixture()` in `predict.js`. Do not touch these without a reason — they are hand-tuned, not trained.
+
+## Confidence grading
+
+Implemented in `confidenceFromProb()` in `predict.js`. Exported constants: `CONFIDENCE_THRESHOLDS`, `confidenceFromProb`.
+
+### How it is calculated
+
+```
+gap = topProbability − secondProbability   (post-softmax, before draw penalty)
+
+gap >= 0.45 → A+
+gap >= 0.32 → A
+gap >= 0.18 → B
+gap >= 0.09 → C
+else        → D
+```
+
+**Draw penalty:** if `p_draw > 0.30` AND the predicted outcome is home or away (not draw), cap grade at B. The penalty does not fire when draw is the top prediction — that would double-penalise a confident draw call.
+
+### Coupon recommendation by grade
+
+| Grade | Coupon recommendation      | Meaning                              |
+|-------|---------------------------|--------------------------------------|
+| A+    | Single                    | Clear favourite, high model separation |
+| A     | Single                    | Solid pick, moderate draw risk       |
+| B     | Single / Double (player's call) | Borderline — hedge if coupon allows |
+| C     | Double                    | Prefer cover                         |
+| D     | Triple (1X2)              | Too uncertain for singles or doubles |
+
+### Final threshold values (`predict.js`)
+
+```js
+export const CONFIDENCE_THRESHOLDS = {
+  A_PLUS: 0.45,
+  A:      0.32,
+  B:      0.18,
+  C:      0.09,
+};
+const DRAW_PENALTY_THRESHOLD = 0.30;
+```
+
+### Why these values — not the original spec
+
+The original Ticket #3 spec suggested lower thresholds (A_PLUS=0.35, A=0.25, B=0.15, C=0.08). A calibration sweep across 5 seasons of historical data (`backtestConfidence.js`) showed those produced identical accuracy for A and B (both 43%), making the B grade meaningless as a coupon signal.
+
+The `top-heavy` set was the only candidate that produced strictly decreasing accuracy:
+
+```
+A+: 53%   (935 fixtures — high-confidence singles)
+A:  41%   (173 fixtures)
+B:  33%   (226 fixtures)
+C:  32%   (159 fixtures)
+D:  30%   (160 fixtures — doubles/triples territory)
+```
+
+The diagnostic also revealed why A and B converged: A-grade fixtures had Avg Draw% of 24% and B-grade 34% — elevated draw risk in both buckets was diluting accuracy at similar rates despite the larger gap in A. The `top-heavy` thresholds push more fixtures into A+, leaving A as a cleaner tier.
+
+**Do not lower these thresholds without re-running `backtestConfidence.js` first.**
+
+### Re-validating thresholds
+
+```bash
+node backtestConfidence.js
+```
+
+This prints the accuracy table, a per-grade diagnostic (Count / Accuracy / Avg Gap% / Avg Draw% / Min Gap% / Max Gap%), a gap threshold sweep over candidate sets, a draw penalty sweep, and applies the best-found thresholds to `predict.js` automatically.
+
+If A and B accuracy converge (< 5pp apart), thresholds need tightening. Re-run after adding real season data.
 
 ## Data shape (canonical)
 

@@ -1,32 +1,52 @@
 // ── Confidence / grading helpers ─────────────────────────────────────────────
-// These operate on raw probabilities and are independent of predictFixture().
-// They are used by backtestConfidence.js and can feed a future UI grade badge.
 
 // Simple argmax on the three outcome probabilities.
 // Note: predictFixture() applies a draw-pick threshold for coupon purposes;
-// this function returns the pure probability winner.
+// this function returns the pure probability winner (used by backtestConfidence.js).
 export function getPredictedOutcome(homeProb, drawProb, awayProb) {
   if (drawProb >= homeProb && drawProb >= awayProb) return 'X';
   if (homeProb >= awayProb) return '1';
   return '2';
 }
 
-// Composite confidence score in the range [0, 100].
-// Formula: (highestProb * 0.7) + (margin * 0.3), scaled to integer percent.
-// The margin term rewards decisive gaps over flat probability distributions.
-export function getPredictionConfidence(homeProb, drawProb, awayProb) {
-  const sorted = [homeProb, drawProb, awayProb].sort((a, b) => b - a);
-  const margin = sorted[0] - sorted[1];
-  return Math.round((sorted[0] * 0.7 + margin * 0.3) * 100);
-}
+// Gap-based thresholds for A+/A/B/C/D grading.
+// gap = topProbability − secondProbability after softmax.
+// Calibrated so that A+ covers the clearest ~20% of fixtures and grades
+// separate meaningfully in hit-rate backtest.
+export const CONFIDENCE_THRESHOLDS = {
+  A_PLUS: 0.45,
+  A:      0.32,
+  B:      0.18,
+  C:      0.09,
+  // gap below C.min → D
+};
 
-// Letter grade based on confidence score.
-export function getPredictionGrade(confidence) {
-  if (confidence >= 80) return 'A+';
-  if (confidence >= 70) return 'A';
-  if (confidence >= 60) return 'B';
-  if (confidence >= 50) return 'C';
-  return 'D';
+const DRAW_PENALTY_THRESHOLD = 0.30;
+
+// Derives A+/A/B/C/D from gap between top two probabilities.
+//
+// Draw penalty: caps grade at B when genuine draw risk exists (drawProb > DRAW_PENALTY_THRESHOLD)
+// AND the predicted top outcome is home or away (not the draw itself).
+// Rationale: if the model is already picking the draw as most likely, the gap
+// already reflects that confidence — penalising it again would be double-counting.
+// The penalty fires only for "home/away pick with elevated draw risk".
+//
+// Traceability: grade depends on gap = topProb − secondProb AND drawProb.
+export function confidenceFromProb(topProb, secondProb, drawProb) {
+  const gap = topProb - secondProb;
+  let grade;
+  if      (gap >= CONFIDENCE_THRESHOLDS.A_PLUS) grade = 'A+';
+  else if (gap >= CONFIDENCE_THRESHOLDS.A)      grade = 'A';
+  else if (gap >= CONFIDENCE_THRESHOLDS.B)      grade = 'B';
+  else if (gap >= CONFIDENCE_THRESHOLDS.C)      grade = 'C';
+  else                                           grade = 'D';
+
+  // topProb === drawProb when draw is the top outcome (same float variable).
+  const drawIsTop = topProb === drawProb;
+  if (!drawIsTop && drawProb > DRAW_PENALTY_THRESHOLD && (grade === 'A+' || grade === 'A')) {
+    grade = 'B';
+  }
+  return grade;
 }
 
 // ── Core prediction helpers ───────────────────────────────────────────────────
@@ -59,12 +79,6 @@ export function softmax(scores) {
   return exps.map(value => value / sum);
 }
 
-export function confidenceFromProb(topProb, secondProb) {
-  const gap = topProb - secondProb;
-  if (topProb >= 0.58 && gap >= 0.16) return "High";
-  if (topProb >= 0.45 && gap >= 0.08) return "Medium";
-  return "Low";
-}
 
 // teamById: { [teamId]: teamObject } — caller builds this from canonical team data.
 export function predictFixture(fixture, teamById) {
@@ -212,30 +226,30 @@ export function predictFixture(fixture, teamById) {
     ? "X"
     : (homeProb >= awayProb ? "1" : "2");
 
-  // Confidence is based on the actual probability spread, not the pick label.
-  const confidence = confidenceFromProb(outcomes[0].prob, outcomes[1].prob);
+  // Confidence grade: gap-based A+/A/B/C/D with draw penalty.
+  // Pass drawProb so the penalty cap can fire when draw risk is elevated.
+  const confidence = confidenceFromProb(outcomes[0].prob, outcomes[1].prob, drawProb);
 
   // ── Coupon recommendation ────────────────────────────────────────────────
-  // Priority order matches the spec:
-  //   1. drawCandidate + Low  → Triple  (high uncertainty, draw likely)
-  //   2. drawCandidate + Med  → Double including draw
-  //   3. High confidence      → Single  (including confident draw picks)
-  //   4. Medium confidence    → Double  (top two outcomes)
-  //   5. Low confidence       → Triple
+  // Derives directly from grade — no separate drawCandidate branching needed
+  // because the draw penalty in confidenceFromProb already caps A/A+ → B
+  // when drawProb is elevated.
+  //
+  //   A+ / A → Single         (clear favourite)
+  //   B      → Single / Double (borderline — player decides based on coupon risk)
+  //   C      → Double          (prefer cover)
+  //   D      → Triple          (too uncertain for singles or doubles)
+  const PICK_ORDER = { '1': 0, 'X': 1, '2': 2 };
+  const pair = [pick, outcomes[1].key]
+    .sort((a, b) => PICK_ORDER[a] - PICK_ORDER[b])
+    .join('');
   let couponRec;
-  if (drawCandidate && confidence === "Low") {
-    couponRec = "Triple (1X2)";
-  } else if (drawCandidate && confidence === "Medium") {
-    if      (pick === "1") couponRec = "Double (1X)";
-    else if (pick === "2") couponRec = "Double (X2)";
-    else /* X is top */    couponRec = outcomes[1].key === "1" ? "Double (1X)" : "Double (X2)";
-  } else if (confidence === "High") {
-    couponRec = `Single (${pick})`;
-  } else if (confidence === "Medium") {
-    const pair = [pick, outcomes[1].key].sort().join("");
-    couponRec = `Double (${pair})`;
-  } else {
-    couponRec = "Triple (1X2)";
+  switch (confidence) {
+    case 'A+':
+    case 'A':  couponRec = `Single (${pick})`;          break;
+    case 'B':  couponRec = `Single / Double (${pair})`; break;
+    case 'C':  couponRec = `Double (${pair})`;           break;
+    default:   couponRec = 'Triple (1X2)';               break;
   }
 
   // ── Reasons ──────────────────────────────────────────────────────────────

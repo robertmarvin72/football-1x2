@@ -232,9 +232,17 @@ td {
   font-size: 12px;
 }
 
-.conf.High { background: #dff7e8; color: #116b37; }
-.conf.Medium { background: #fff1ce; color: #7a5200; }
-.conf.Low { background: #eef3f8; color: #52657a; }
+.conf[data-grade="A+"] { background: #c4f0d4; color: #0a3d20; }
+.conf[data-grade="A"]  { background: #dff7e8; color: #116b37; }
+.conf[data-grade="B"]  { background: #fff1ce; color: #7a5200; }
+.conf[data-grade="C"]  { background: #ffe8cc; color: #7a3900; }
+.conf[data-grade="D"]  { background: #fde8e8; color: #8b1a1a; }
+
+.coupon {
+  color: #40536a;
+  font-size: 13px;
+  white-space: nowrap;
+}
 
 .why {
   color: #40536a;

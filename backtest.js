@@ -55,10 +55,10 @@ function printReport({ label, evaluated, skipped, hits, byConf, byPick, realDraw
   console.log(`Fixtures evaluated        : ${evaluated}`);
   console.log(`Skipped (< ${MIN_PRIOR} prior)     : ${skipped}`);
   console.log(`Hit rate                  : ${pct(hits, evaluated)}`);
-  console.log('By confidence:');
-  for (const conf of ['High', 'Medium', 'Low']) {
+  console.log('By confidence grade:');
+  for (const conf of ['A+', 'A', 'B', 'C', 'D']) {
     const { correct, total } = byConf[conf];
-    console.log(`  ${conf.padEnd(6)} ${correct}/${total} (${pct(correct, total)})`);
+    console.log(`  ${conf.padEnd(3)} ${correct}/${total} (${pct(correct, total)})`);
   }
   console.log('By predicted outcome:');
   console.log(`  Home (1): ${byPick["1"].correct}/${byPick["1"].total} (${pct(byPick["1"].correct, byPick["1"].total)})`);
@@ -132,7 +132,7 @@ async function runApiBacktest() {
 
   const idToSlug = buildIdToSlug(allFinished);
   let evaluated = 0, skipped = 0, hits = 0, realDraws = 0;
-  const byConf = { High: emptyStats(), Medium: emptyStats(), Low: emptyStats() };
+  const byConf = { 'A+': emptyStats(), 'A': emptyStats(), 'B': emptyStats(), 'C': emptyStats(), 'D': emptyStats() };
   const byPick = { '1': emptyStats(), 'X': emptyStats(), '2': emptyStats() };
 
   for (const match of allFinished) {
@@ -194,7 +194,7 @@ async function runHistoricalBacktest({ league, seasons }) {
   console.log(`Loaded ${allFixtures.length} fixtures.`);
 
   let evaluated = 0, skipped = 0, hits = 0, realDraws = 0;
-  const byConf = { High: emptyStats(), Medium: emptyStats(), Low: emptyStats() };
+  const byConf = { 'A+': emptyStats(), 'A': emptyStats(), 'B': emptyStats(), 'C': emptyStats(), 'D': emptyStats() };
   const byPick = { '1': emptyStats(), 'X': emptyStats(), '2': emptyStats() };
   // diagnostic: drawProb → actual draw rate in each 10-bucket
   const dpBuckets = Array.from({ length: 10 }, () => ({ total: 0, draws: 0 }));

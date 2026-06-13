@@ -107,10 +107,16 @@ function formatPercent(value) {
   return `${Math.round(value * 100)}%`;
 }
 
+// Grade order: lower index = stronger grade.
+const GRADE_ORDER = { 'A+': 0, 'A': 1, 'B': 2, 'C': 3, 'D': 4 };
+
 function passesFilters(prediction) {
   if (state.league !== "all" && prediction.fixture.league !== state.league) return false;
-  if (state.confidence === "High" && prediction.confidence !== "High") return false;
-  if (state.confidence === "Medium" && prediction.confidence === "Low") return false;
+  // Confidence filter value is the weakest grade to include (cumulative downward).
+  // e.g. state.confidence === "A" → show A+ and A only.
+  if (state.confidence !== "all") {
+    if (GRADE_ORDER[prediction.confidence] > GRADE_ORDER[state.confidence]) return false;
+  }
   return true;
 }
 
@@ -121,7 +127,7 @@ function renderPredictions(predictions) {
   tbody.innerHTML = "";
 
   if (predictions.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">No predictions match the current filters.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" class="empty-state">No predictions match the current filters.</td></tr>';
     document.querySelector("#totalGames").textContent = "0";
     document.querySelector("#topPick").textContent = "-";
     document.querySelector("#avgConfidence").textContent = "-";
@@ -137,7 +143,8 @@ function renderPredictions(predictions) {
       <td class="percent">${formatPercent(prediction.probabilities["X"])}</td>
       <td class="percent">${formatPercent(prediction.probabilities["2"])}</td>
       <td><span class="pick">${prediction.pick}</span></td>
-      <td><span class="conf ${prediction.confidence}">${prediction.confidence}</span></td>
+      <td><span class="conf" data-grade="${prediction.confidence}">${prediction.confidence}</span></td>
+      <td class="coupon">${prediction.couponRec}</td>
       <td class="why">${prediction.reasons.join("; ")}</td>
     `;
     tbody.appendChild(row);
@@ -187,13 +194,13 @@ function reconstructProbs(saved) {
   return { '1': half, 'X': drawP, '2': half };
 }
 
-// Derive the categorical confidence label from a saved fixture's stored floats.
+// Derive the confidence grade from a saved fixture's stored floats.
 function savedConfidenceLabel(saved) {
   const top    = saved.confidence;
   const second = saved.predictedOutcome === 'X'
     ? saved.upsetProbability
     : Math.max(saved.drawProbability, saved.upsetProbability);
-  return confidenceFromProb(top, second);
+  return confidenceFromProb(top, second, saved.drawProbability);
 }
 
 // Adapt a predictions.json fixture entry to the shape renderPredictions() expects.
@@ -208,7 +215,8 @@ function transformSaved(saved) {
     pick:           saved.predictedOutcome,
     confidence:     conf,
     topProbability: saved.confidence,
-    reasons:        [saved.couponRecommendation],
+    couponRec:      saved.couponRecommendation,
+    reasons:        [],
   };
 }
 
@@ -222,7 +230,7 @@ async function loadSavedPredictions() {
 
     const fixtures = Array.isArray(data.fixtures) ? data.fixtures : [];
     if (fixtures.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="8" class="empty-state">'
+      tbody.innerHTML = '<tr><td colspan="9" class="empty-state">'
         + 'No saved predictions found. Run: <code>node generatePredictions.js</code>'
         + '</td></tr>';
       setDataSource(null);
@@ -240,7 +248,7 @@ async function loadSavedPredictions() {
       : "unknown";
     setDataSource(`Saved predictions · Generated ${generated}`);
   } catch {
-    tbody.innerHTML = '<tr><td colspan="8" class="empty-state">'
+    tbody.innerHTML = '<tr><td colspan="9" class="empty-state">'
       + 'No saved predictions found. Run: <code>node generatePredictions.js</code>'
       + '</td></tr>';
     setDataSource(null);
