@@ -1,4 +1,3 @@
-import { fetchFootballData } from './apiAdapter.js';
 import { predictFixture, confidenceFromProb } from './predict.js';
 
 const demoData = {
@@ -279,22 +278,12 @@ function initFilters() {
     render();
   });
 
-  document.querySelector("#runBtn").addEventListener("click", async () => {
-    appData = await fetchFootballData(true);
-    teamById = Object.fromEntries(appData.teams.map(t => [t.id, t]));
-    render();
-  });
+  document.querySelector("#runBtn").addEventListener("click", loadSavedPredictions);
 
   document.querySelector("#loadSavedBtn").addEventListener("click", loadSavedPredictions);
 }
 
 (async () => {
-  try {
-    appData = await fetchFootballData();
-    teamById = Object.fromEntries(appData.teams.map(t => [t.id, t]));
-  } catch (err) {
-    console.warn("Live data fetch failed — falling back to demo data.", err.message);
-  }
   initFilters();
-  render();
+  await loadSavedPredictions();
 })();

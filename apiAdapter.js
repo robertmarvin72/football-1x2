@@ -1,3 +1,7 @@
+if (typeof window !== 'undefined') {
+  throw new Error('apiAdapter.js must only run in Node.js. Do not import in browser.');
+}
+
 const API_KEY = "2c65ee23070a41be93d84fd7ad5f0856";
 const BASE_URL = "https://api.football-data.org/v4";
 export const DEMO_MODE = false;
