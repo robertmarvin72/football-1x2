@@ -95,8 +95,9 @@ const demoData = {
 };
 
 const state = {
-  league: "all",
-  confidence: "all"
+  league:     "all",
+  confidence: "all",
+  week:       null,   // Monday ISO date string "YYYY-MM-DD" of the selected week
 };
 
 let appData = demoData;
@@ -110,9 +111,10 @@ const PREDICTION_FILES = {
 
 const LEAGUE_DISPLAY = { PL: 'Premier League', ELC: 'Championship' };
 
-// Saved predictions loaded from file — raw, unfiltered by confidence.
+// Saved predictions loaded from file — raw, unfiltered.
 let loadedPredictions = [];
 let loadedGeneratedAt = null;
+let weekGroups        = new Map(); // mondayStr → prediction[]
 
 function formatPercent(value) {
   return `${Math.round(value * 100)}%`;
@@ -129,6 +131,72 @@ function passesFilters(prediction) {
     if (GRADE_ORDER[prediction.confidence] > GRADE_ORDER[state.confidence]) return false;
   }
   return true;
+}
+
+// ── ISO week helpers ──────────────────────────────────────────────────────────
+
+// Returns the Monday date string ("YYYY-MM-DD") of the ISO week containing dateStr.
+function mondayOf(dateStr) {
+  if (!dateStr) return null;
+  const d = new Date(dateStr + 'T12:00:00Z');
+  const dow = d.getUTCDay() || 7; // 1=Mon … 7=Sun
+  d.setUTCDate(d.getUTCDate() - dow + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+// Short month-day label, e.g. "21 Aug".
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDay(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr + 'T12:00:00Z');
+  return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`;
+}
+
+// "14–16 Aug (10 matches)" from the actual fixture dates within the week.
+function weekLabel(predictions) {
+  const dates = predictions.map(p => p.fixture.date).filter(Boolean).sort();
+  if (!dates.length) return '—';
+  const f = new Date(dates[0] + 'T12:00:00Z');
+  const l = new Date(dates[dates.length - 1] + 'T12:00:00Z');
+  const fd = f.getUTCDate(), ld = l.getUTCDate();
+  const fm = MONTHS[f.getUTCMonth()], lm = MONTHS[l.getUTCMonth()];
+  const range = fm === lm ? `${fd}–${ld} ${fm}` : `${fd} ${fm} – ${ld} ${lm}`;
+  const n = predictions.length;
+  return `${range} (${n} match${n !== 1 ? 'es' : ''})`;
+}
+
+// Build Map<mondayStr, prediction[]> sorted by Monday date.
+function buildWeekGroups(predictions) {
+  const map = new Map();
+  for (const p of predictions) {
+    const key = mondayOf(p.fixture.date);
+    if (!key) continue;
+    if (!map.has(key)) map.set(key, []);
+    map.get(key).push(p);
+  }
+  return new Map([...map.entries()].sort());
+}
+
+// Populate #weekFilter <select> from groups.
+function populateWeekSelector(groups) {
+  const sel = document.querySelector("#weekFilter");
+  sel.innerHTML = '';
+  for (const [monday, preds] of groups) {
+    const opt = document.createElement("option");
+    opt.value = monday;
+    opt.textContent = weekLabel(preds);
+    sel.appendChild(opt);
+  }
+}
+
+// First week whose Monday is >= today's Monday; falls back to last week if all past.
+function defaultWeekKey(groups) {
+  const todayMonday = mondayOf(new Date().toISOString().slice(0, 10));
+  for (const monday of groups.keys()) {
+    if (monday >= todayMonday) return monday;
+  }
+  const keys = [...groups.keys()];
+  return keys[keys.length - 1] ?? null;
 }
 
 // ── shared renderer ───────────────────────────────────────────────────────────
@@ -149,7 +217,12 @@ function renderPredictions(predictions) {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${LEAGUE_DISPLAY[prediction.fixture.league] || prediction.fixture.league}</td>
-      <td><strong>${prediction.home.name}</strong> vs <strong>${prediction.away.name}</strong></td>
+      <td>
+        <strong>${prediction.home.name}</strong> vs <strong>${prediction.away.name}</strong>
+        ${(prediction.fixture.matchday != null || prediction.fixture.date)
+          ? `<span class="match-meta">${prediction.fixture.matchday != null ? `MD ${prediction.fixture.matchday}` : ''}${prediction.fixture.matchday != null && prediction.fixture.date ? ' · ' : ''}${fmtDay(prediction.fixture.date)}</span>`
+          : ''}
+      </td>
       <td class="percent">${formatPercent(prediction.probabilities["1"])}</td>
       <td class="percent">${formatPercent(prediction.probabilities["X"])}</td>
       <td class="percent">${formatPercent(prediction.probabilities["2"])}</td>
@@ -184,14 +257,27 @@ function setDataSource(text) {
 // ── apply confidence filter and re-render loaded predictions ─────────────────
 
 function applyAndRender() {
-  const filtered = loadedPredictions.filter(p => {
-    if (state.confidence === 'all') return true;
-    return GRADE_ORDER[p.confidence] <= GRADE_ORDER[state.confidence];
-  });
-  renderPredictions(filtered);
+  // Week filter — apply first (cheapest reduction).
+  let predictions = state.week
+    ? (weekGroups.get(state.week) ?? [])
+    : loadedPredictions;
+
+  // Confidence filter.
+  if (state.confidence !== 'all') {
+    predictions = predictions.filter(p => GRADE_ORDER[p.confidence] <= GRADE_ORDER[state.confidence]);
+  }
+
+  renderPredictions(predictions);
+
   if (loadedGeneratedAt) {
     setDataSource(`Saved predictions · Generated ${new Date(loadedGeneratedAt).toLocaleString()}`);
   }
+
+  // Update prev / next button enabled state.
+  const keys = [...weekGroups.keys()];
+  const idx  = state.week ? keys.indexOf(state.week) : -1;
+  document.querySelector("#prevWeek").disabled = idx <= 0;
+  document.querySelector("#nextWeek").disabled = idx < 0 || idx >= keys.length - 1;
 }
 
 // ── live render ───────────────────────────────────────────────────────────────
@@ -232,7 +318,7 @@ function transformSaved(saved) {
   const probs = reconstructProbs(saved);
   const conf  = savedConfidenceLabel(saved);
   return {
-    fixture:        { league: saved.league },
+    fixture:        { league: saved.league, date: saved.date ?? null, matchday: saved.matchday ?? null },
     home:           { name: saved.homeTeam },
     away:           { name: saved.awayTeam },
     probabilities:  probs,
@@ -251,8 +337,8 @@ function resetSummary() {
 }
 
 async function loadSavedPredictions() {
-  const tbody  = document.querySelector("#predictionRows");
-  const codes  = state.league === 'all' ? ['PL', 'ELC'] : [state.league];
+  const tbody = document.querySelector("#predictionRows");
+  const codes = state.league === 'all' ? ['PL', 'ELC'] : [state.league];
 
   const settled = await Promise.allSettled(
     codes.map(code =>
@@ -264,6 +350,7 @@ async function loadSavedPredictions() {
   let allPredictions = [];
   const failedCodes  = [];
   let latestTimestamp = null;
+  const seasons = new Set();
 
   for (let i = 0; i < settled.length; i++) {
     const result = settled[i];
@@ -275,9 +362,23 @@ async function loadSavedPredictions() {
       if (data.generatedAt && (!latestTimestamp || data.generatedAt > latestTimestamp)) {
         latestTimestamp = data.generatedAt;
       }
+      if (data.season?.label) seasons.add(data.season.label);
     } else {
       failedCodes.push(code);
     }
+  }
+
+  // Season indicator.
+  const seasonEl = document.querySelector("#seasonLabel");
+  if (seasons.size === 1) {
+    seasonEl.textContent = [...seasons][0];
+    seasonEl.classList.remove('warning');
+  } else if (seasons.size > 1) {
+    seasonEl.textContent = `⚠ ${[...seasons].join(' / ')}`;
+    seasonEl.classList.add('warning');
+  } else {
+    seasonEl.textContent = '—';
+    seasonEl.classList.remove('warning');
   }
 
   if (allPredictions.length === 0) {
@@ -288,11 +389,22 @@ async function loadSavedPredictions() {
     resetSummary();
     loadedPredictions = [];
     loadedGeneratedAt = null;
+    weekGroups = new Map();
     return;
   }
 
   loadedPredictions = allPredictions;
   loadedGeneratedAt = latestTimestamp;
+
+  // Rebuild week groups and selector.
+  const prevWeek = state.week;
+  weekGroups = buildWeekGroups(allPredictions);
+  populateWeekSelector(weekGroups);
+
+  // Preserve the selected week if it still has fixtures, otherwise pick the default.
+  state.week = (prevWeek && weekGroups.has(prevWeek)) ? prevWeek : defaultWeekKey(weekGroups);
+  document.querySelector("#weekFilter").value = state.week ?? '';
+
   applyAndRender();
 
   if (failedCodes.length) {
@@ -323,6 +435,31 @@ function initFilters() {
   document.querySelector("#confidenceFilter").addEventListener("change", event => {
     state.confidence = event.target.value;
     applyAndRender();
+  });
+
+  document.querySelector("#weekFilter").addEventListener("change", event => {
+    state.week = event.target.value || null;
+    applyAndRender();
+  });
+
+  document.querySelector("#prevWeek").addEventListener("click", () => {
+    const keys = [...weekGroups.keys()];
+    const idx  = keys.indexOf(state.week);
+    if (idx > 0) {
+      state.week = keys[idx - 1];
+      document.querySelector("#weekFilter").value = state.week;
+      applyAndRender();
+    }
+  });
+
+  document.querySelector("#nextWeek").addEventListener("click", () => {
+    const keys = [...weekGroups.keys()];
+    const idx  = keys.indexOf(state.week);
+    if (idx >= 0 && idx < keys.length - 1) {
+      state.week = keys[idx + 1];
+      document.querySelector("#weekFilter").value = state.week;
+      applyAndRender();
+    }
   });
 
   document.querySelector("#runBtn").addEventListener("click", loadSavedPredictions);

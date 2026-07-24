@@ -92,6 +92,7 @@ async function main() {
         league:               code,
         leagueName,
         date:                 fixture.date ?? null,
+        matchday:             fixture.matchday ?? null,
         homeTeam:             teamById[fixture.home].name,
         awayTeam:             teamById[fixture.away].name,
         predictedOutcome:     prediction.pick,
