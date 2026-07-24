@@ -4,7 +4,7 @@ if (typeof window !== 'undefined') {
 
 const API_KEY      = "2c65ee23070a41be93d84fd7ad5f0856";
 const BASE_URL     = "https://api.football-data.org/v4";
-const STATS_SEASON = process.env.STATS_SEASON ?? '2025';
+export const STATS_SEASON = process.env.STATS_SEASON ?? '2025';
 export const DEMO_MODE = false;
 
 // In-memory cache for fetchFootballData

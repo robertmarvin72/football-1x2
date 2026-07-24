@@ -2,33 +2,34 @@
 // Requires Node.js 18+ and package.json "type":"module".
 //
 // Options:
-//   --league PL|ELC            default: both leagues
-//   --output path/to/file.json default: predictions.json
-//   --dry-run                  print to stdout, do not write file
+//   --league PL|ELC   default: both leagues
 //
-// Examples:
-//   node generatePredictions.js
-//   node generatePredictions.js --league PL
-//   node generatePredictions.js --league ELC
-//   node generatePredictions.js --output path/to/custom.json
-//   node generatePredictions.js --dry-run
+// Output:
+//   data/predictions/PL/{season}.json
+//   data/predictions/ELC/{season}.json
 
-import { fetchFootballData } from './apiAdapter.js';
+import { fetchFootballData, STATS_SEASON } from './apiAdapter.js';
 import { predictFixture } from './predict.js';
-import { writeFile } from 'node:fs/promises';
+import { writeFile, mkdir } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const COMPETITION_NAMES = {
+  PL:  'Premier League',
+  ELC: 'Championship',
+};
 
 const LEAGUE_NAME_TO_CODE = {
   'Premier League': 'PL',
-  'Championship': 'ELC',
+  'Championship':   'ELC',
 };
 
 function parseArgs(argv) {
-  const result = { league: null, output: 'predictions.json', dryRun: false };
+  const result = { league: null };
   for (let i = 0; i < argv.length; i++) {
-    const flag = argv[i];
-    if (flag === '--league')       result.league  = argv[++i];
-    else if (flag === '--output')  result.output  = argv[++i];
-    else if (flag === '--dry-run') result.dryRun  = true;
+    if (argv[i] === '--league') result.league = argv[++i];
   }
   return result;
 }
@@ -37,10 +38,6 @@ function resolveLeagueCode(fixture) {
   return fixture.leagueCode ?? LEAGUE_NAME_TO_CODE[fixture.league] ?? fixture.league;
 }
 
-// Probability of the non-favoured outcome (the "upset" scenario).
-// For predicted "1": how likely is the away team to win?
-// For predicted "2": how likely is the home team to win?
-// For predicted "X": how likely is either side to win decisively?
 function upsetProb(prediction) {
   const { pick, probabilities } = prediction;
   if (pick === '1') return probabilities['2'];
@@ -51,97 +48,97 @@ function upsetProb(prediction) {
 async function main() {
   const args = parseArgs(process.argv.slice(2));
 
+  // Scheduled season is one year ahead of the stats season:
+  // STATS_SEASON='2025' → finished data from 2025/26 → schedule for 2026/27.
+  const statsYear     = parseInt(STATS_SEASON, 10);
+  const schedYear     = statsYear + 1;
+  const seasonLabel   = `${schedYear}-${String(schedYear + 1).slice(-2)}`;   // "2026-27"
+  const seasonDisplay = `${schedYear}/${String(schedYear + 1).slice(-2)}`;    // "2026/27"
+
   console.log('Fetching upcoming fixtures…');
   const { teams, fixtures } = await fetchFootballData();
   const teamById = Object.fromEntries(teams.map(t => [t.id, t]));
 
-  // Warn per league if no upcoming fixtures were returned
-  for (const code of ['PL', 'ELC']) {
-    if (args.league && args.league !== code) continue;
-    if (!fixtures.some(f => resolveLeagueCode(f) === code)) {
-      console.warn(`Warning: no upcoming fixtures found for ${code}`);
-    }
-  }
+  const codes = args.league ? [args.league] : Object.keys(COMPETITION_NAMES);
 
-  const selected = args.league
-    ? fixtures.filter(f => resolveLeagueCode(f) === args.league)
-    : fixtures;
-
-  // Gameweek = lowest matchday among selected fixtures per league
-  const gameweek = {};
-  for (const f of selected) {
-    const code = resolveLeagueCode(f);
-    if (f.matchday != null && (gameweek[code] == null || f.matchday < gameweek[code])) {
-      gameweek[code] = f.matchday;
-    }
-  }
-
-  // Run predictions
-  const fixtureResults = [];
-  for (const fixture of selected) {
-    if (!teamById[fixture.home] || !teamById[fixture.away]) {
-      console.warn(`Warning: no team data for fixture ${fixture.id} — skipping`);
+  for (const code of codes) {
+    const leagueName = COMPETITION_NAMES[code];
+    if (!leagueName) {
+      console.error(`Unknown league code: ${code}`);
       continue;
     }
 
-    const prediction = predictFixture(fixture, teamById);
-    const code = resolveLeagueCode(fixture);
+    const selected = fixtures.filter(f => resolveLeagueCode(f) === code);
+    if (selected.length === 0) {
+      console.warn(`Warning: no upcoming fixtures found for ${code}`);
+    }
 
-    fixtureResults.push({
-      id: String(fixture.id),
-      league: code,
-      date: fixture.date ?? null,
-      homeTeam: teamById[fixture.home].name,
-      awayTeam: teamById[fixture.away].name,
-      predictedOutcome: prediction.pick,
-      confidence: parseFloat(prediction.topProbability.toFixed(4)),
-      drawProbability: parseFloat(prediction.probabilities['X'].toFixed(4)),
-      upsetProbability: parseFloat(upsetProb(prediction).toFixed(4)),
-      drawCandidate: prediction.drawCandidate,
-      couponRecommendation: prediction.couponRec,
-    });
-  }
+    let matchday = null;
+    for (const f of selected) {
+      if (f.matchday != null && (matchday == null || f.matchday < matchday)) {
+        matchday = f.matchday;
+      }
+    }
 
-  // Summary sections
-  const topPicks = fixtureResults
-    .filter(f => f.couponRecommendation.startsWith('Single'))
-    .sort((a, b) => b.confidence - a.confidence)
-    .slice(0, 10);
+    const fixtureResults = [];
+    for (const fixture of selected) {
+      if (!teamById[fixture.home] || !teamById[fixture.away]) {
+        console.warn(`Warning: no team data for fixture ${fixture.id} — skipping`);
+        continue;
+      }
+      const prediction = predictFixture(fixture, teamById);
+      fixtureResults.push({
+        id:                   String(fixture.id),
+        league:               code,
+        leagueName,
+        date:                 fixture.date ?? null,
+        homeTeam:             teamById[fixture.home].name,
+        awayTeam:             teamById[fixture.away].name,
+        predictedOutcome:     prediction.pick,
+        confidence:           parseFloat(prediction.topProbability.toFixed(4)),
+        drawProbability:      parseFloat(prediction.probabilities['X'].toFixed(4)),
+        upsetProbability:     parseFloat(upsetProb(prediction).toFixed(4)),
+        drawCandidate:        prediction.drawCandidate,
+        couponRecommendation: prediction.couponRec,
+      });
+    }
 
-  const drawCandidates = fixtureResults
-    .filter(f => f.drawCandidate)
-    .sort((a, b) => b.drawProbability - a.drawProbability)
-    .slice(0, 10);
+    const topPicks = fixtureResults
+      .filter(f => f.couponRecommendation.startsWith('Single'))
+      .sort((a, b) => b.confidence - a.confidence)
+      .slice(0, 10);
 
-  const upsetCandidates = fixtureResults
-    .filter(f => f.predictedOutcome === '1' && f.upsetProbability >= 0.30)
-    .sort((a, b) => b.upsetProbability - a.upsetProbability)
-    .slice(0, 10);
+    const drawCandidates = fixtureResults
+      .filter(f => f.drawCandidate)
+      .sort((a, b) => b.drawProbability - a.drawProbability)
+      .slice(0, 10);
 
-  const output = {
-    generated: new Date().toISOString(),
-    gameweek,
-    fixtures: fixtureResults,
-    summary: {
-      totalFixtures: fixtureResults.length,
-      topPicks,
-      drawCandidates,
-      upsetCandidates,
-    },
-  };
+    const upsetCandidates = fixtureResults
+      .filter(f => f.predictedOutcome === '1' && f.upsetProbability >= 0.30)
+      .sort((a, b) => b.upsetProbability - a.upsetProbability)
+      .slice(0, 10);
 
-  const json = JSON.stringify(output, null, 2);
+    const output = {
+      competition: { code, name: leagueName },
+      season:      { startYear: schedYear, label: seasonDisplay },
+      generatedAt: new Date().toISOString(),
+      statsBasis:  { season: STATS_SEASON, quality: 'previous-season' },
+      gameweek:    matchday != null ? { [code]: matchday } : {},
+      fixtures:    fixtureResults,
+      summary: {
+        totalFixtures: fixtureResults.length,
+        topPicks,
+        drawCandidates,
+        upsetCandidates,
+      },
+    };
 
-  if (args.dryRun) {
-    console.log(json);
-  } else {
-    await writeFile(args.output, json, 'utf8');
-    console.log(`Saved ${fixtureResults.length} predictions → ${args.output}`);
-    console.log(
-      `Summary: ${topPicks.length} banker${topPicks.length !== 1 ? 's' : ''}, ` +
-      `${drawCandidates.length} draw candidate${drawCandidates.length !== 1 ? 's' : ''}, ` +
-      `${upsetCandidates.length} upset alert${upsetCandidates.length !== 1 ? 's' : ''}`
-    );
+    const outDir  = join(__dirname, 'data', 'predictions', code);
+    const outFile = join(outDir, `${seasonLabel}.json`);
+
+    await mkdir(outDir, { recursive: true });
+    await writeFile(outFile, JSON.stringify(output, null, 2), 'utf8');
+    console.log(`${code}: ${fixtureResults.length} predictions → data/predictions/${code}/${seasonLabel}.json`);
   }
 }
 

@@ -88,9 +88,9 @@ const demoData = {
     }
   ],
   fixtures: [
-    { id: 1, league: "Premier League", home: "arsenal", away: "wolves" },
-    { id: 2, league: "Championship", home: "leeds", away: "norwich" },
-    { id: 3, league: "Premier League", home: "liverpool", away: "chelsea" }
+    { id: 1, league: "PL", home: "arsenal", away: "wolves" },
+    { id: 2, league: "ELC", home: "leeds", away: "norwich" },
+    { id: 3, league: "PL", home: "liverpool", away: "chelsea" }
   ]
 };
 
@@ -101,6 +101,18 @@ const state = {
 
 let appData = demoData;
 let teamById = Object.fromEntries(demoData.teams.map(team => [team.id, team]));
+
+// Per-competition prediction files written by generatePredictions.js.
+const PREDICTION_FILES = {
+  PL:  './data/predictions/PL/2026-27.json',
+  ELC: './data/predictions/ELC/2026-27.json',
+};
+
+const LEAGUE_DISPLAY = { PL: 'Premier League', ELC: 'Championship' };
+
+// Saved predictions loaded from file — raw, unfiltered by confidence.
+let loadedPredictions = [];
+let loadedGeneratedAt = null;
 
 function formatPercent(value) {
   return `${Math.round(value * 100)}%`;
@@ -136,7 +148,7 @@ function renderPredictions(predictions) {
   predictions.forEach(prediction => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${prediction.fixture.league}</td>
+      <td>${LEAGUE_DISPLAY[prediction.fixture.league] || prediction.fixture.league}</td>
       <td><strong>${prediction.home.name}</strong> vs <strong>${prediction.away.name}</strong></td>
       <td class="percent">${formatPercent(prediction.probabilities["1"])}</td>
       <td class="percent">${formatPercent(prediction.probabilities["X"])}</td>
@@ -167,6 +179,19 @@ function setDataSource(text) {
   if (!text) { el.hidden = true; return; }
   el.textContent = text;
   el.hidden = false;
+}
+
+// ── apply confidence filter and re-render loaded predictions ─────────────────
+
+function applyAndRender() {
+  const filtered = loadedPredictions.filter(p => {
+    if (state.confidence === 'all') return true;
+    return GRADE_ORDER[p.confidence] <= GRADE_ORDER[state.confidence];
+  });
+  renderPredictions(filtered);
+  if (loadedGeneratedAt) {
+    setDataSource(`Saved predictions · Generated ${new Date(loadedGeneratedAt).toLocaleString()}`);
+  }
 }
 
 // ── live render ───────────────────────────────────────────────────────────────
@@ -219,63 +244,85 @@ function transformSaved(saved) {
   };
 }
 
+function resetSummary() {
+  document.querySelector("#totalGames").textContent = "0";
+  document.querySelector("#topPick").textContent = "-";
+  document.querySelector("#avgConfidence").textContent = "-";
+}
+
 async function loadSavedPredictions() {
-  const tbody = document.querySelector("#predictionRows");
+  const tbody  = document.querySelector("#predictionRows");
+  const codes  = state.league === 'all' ? ['PL', 'ELC'] : [state.league];
 
-  try {
-    const res = await fetch('./predictions.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+  const settled = await Promise.allSettled(
+    codes.map(code =>
+      fetch(PREDICTION_FILES[code])
+        .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    )
+  );
 
-    const fixtures = Array.isArray(data.fixtures) ? data.fixtures : [];
-    if (fixtures.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="9" class="empty-state">'
-        + 'No saved predictions found. Run: <code>node generatePredictions.js</code>'
-        + '</td></tr>';
-      setDataSource(null);
-      document.querySelector("#totalGames").textContent = "0";
-      document.querySelector("#topPick").textContent = "-";
-      document.querySelector("#avgConfidence").textContent = "-";
-      return;
+  let allPredictions = [];
+  const failedCodes  = [];
+  let latestTimestamp = null;
+
+  for (let i = 0; i < settled.length; i++) {
+    const result = settled[i];
+    const code   = codes[i];
+    if (result.status === 'fulfilled') {
+      const data = result.value;
+      const fixturesArr = Array.isArray(data.fixtures) ? data.fixtures : [];
+      allPredictions.push(...fixturesArr.map(transformSaved));
+      if (data.generatedAt && (!latestTimestamp || data.generatedAt > latestTimestamp)) {
+        latestTimestamp = data.generatedAt;
+      }
+    } else {
+      failedCodes.push(code);
     }
+  }
 
-    const predictions = fixtures.map(transformSaved);
-    renderPredictions(predictions);
-
-    const generated = data.generated
-      ? new Date(data.generated).toLocaleString()
-      : "unknown";
-    setDataSource(`Saved predictions · Generated ${generated}`);
-  } catch {
+  if (allPredictions.length === 0) {
     tbody.innerHTML = '<tr><td colspan="9" class="empty-state">'
       + 'No saved predictions found. Run: <code>node generatePredictions.js</code>'
       + '</td></tr>';
-    setDataSource(null);
-    document.querySelector("#totalGames").textContent = "0";
-    document.querySelector("#topPick").textContent = "-";
-    document.querySelector("#avgConfidence").textContent = "-";
+    setDataSource(failedCodes.length ? `Failed to load: ${failedCodes.join(', ')}` : null);
+    resetSummary();
+    loadedPredictions = [];
+    loadedGeneratedAt = null;
+    return;
+  }
+
+  loadedPredictions = allPredictions;
+  loadedGeneratedAt = latestTimestamp;
+  applyAndRender();
+
+  if (failedCodes.length) {
+    const ts = latestTimestamp ? new Date(latestTimestamp).toLocaleString() : 'unknown';
+    setDataSource(
+      `Saved predictions · Generated ${ts} · ⚠ Failed to load: ${failedCodes.join(', ')}`
+    );
   }
 }
 
 function initFilters() {
   const leagueFilter = document.querySelector("#leagueFilter");
-  const leagues = [...new Set(appData.fixtures.map(fixture => fixture.league))];
 
-  leagues.forEach(league => {
-    const option = document.createElement("option");
-    option.value = league;
-    option.textContent = league;
-    leagueFilter.appendChild(option);
-  });
+  // Fixed league list — option values are codes so state.league === PREDICTION_FILES key.
+  [{ code: 'PL', name: 'Premier League' }, { code: 'ELC', name: 'Championship' }]
+    .forEach(({ code, name }) => {
+      const opt = document.createElement("option");
+      opt.value = code;
+      opt.textContent = name;
+      leagueFilter.appendChild(opt);
+    });
 
   leagueFilter.addEventListener("change", event => {
     state.league = event.target.value;
-    render();
+    loadSavedPredictions();
   });
 
   document.querySelector("#confidenceFilter").addEventListener("change", event => {
     state.confidence = event.target.value;
-    render();
+    applyAndRender();
   });
 
   document.querySelector("#runBtn").addEventListener("click", loadSavedPredictions);
