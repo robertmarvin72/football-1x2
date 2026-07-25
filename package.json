@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
+    "predict":            "node --env-file=.env generatePredictions.js",
     "backtest:confidence": "node backtestConfidence.js",
-    "test:predictions": "node backtestConfidence.js"
+    "test:predictions":   "node backtestConfidence.js"
   }
 }

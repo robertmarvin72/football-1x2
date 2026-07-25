@@ -2,10 +2,31 @@ if (typeof window !== 'undefined') {
   throw new Error('apiAdapter.js must only run in Node.js. Do not import in browser.');
 }
 
-const API_KEY      = "2c65ee23070a41be93d84fd7ad5f0856";
+const API_KEY = process.env.FOOTBALL_DATA_API_KEY;
 const BASE_URL     = "https://api.football-data.org/v4";
 export const STATS_SEASON = process.env.STATS_SEASON ?? '2025';
 export const DEMO_MODE = false;
+
+// Division-level scaling factors applied when a team's stats come from the other
+// competition (e.g. Hull City's ELC stats used to predict PL fixtures).
+// Unvalidated starting values — tune against backtest results before treating
+// these as meaningful. A single exported object so they can be updated centrally.
+export const DIVISION_ADJUSTMENT = {
+  promoted: {            // ELC 25/26 stats used for a PL fixture
+    goalsForPerGame:     0.75,
+    goalsAgainstPerGame: 1.25,
+    pointsPerGame:       0.65,
+    homePointsPerGame:   0.65,
+    awayPointsPerGame:   0.65,
+  },
+  relegated: {           // PL 25/26 stats used for an ELC fixture
+    goalsForPerGame:     1.25,
+    goalsAgainstPerGame: 0.80,
+    pointsPerGame:       1.35,
+    homePointsPerGame:   1.35,
+    awayPointsPerGame:   1.35,
+  },
+};
 
 // In-memory cache for fetchFootballData
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
@@ -20,6 +41,12 @@ const COMPETITIONS = [
 ];
 
 export async function apiFetch(path) {
+  if (!API_KEY) {
+    throw new Error(
+      'Missing FOOTBALL_DATA_API_KEY. Add it to your local .env file ' +
+      'and run via npm run predict.'
+    );
+  }
   const response = await fetch(`${BASE_URL}${path}`, {
     headers: { "X-Auth-Token": API_KEY },
   });
@@ -126,6 +153,32 @@ export function buildTeamStats(teamId, finishedMatches, today) {
   };
 }
 
+// Extract adjustable numeric metrics into a plain object (the rawStats shape).
+// drawRate, recent and restDays are excluded — they are ratios/sequences, not level-dependent.
+function extractRaw(stats) {
+  return {
+    pointsPerGame:       stats.pointsPerGame,
+    homePointsPerGame:   stats.homePointsPerGame,
+    awayPointsPerGame:   stats.awayPointsPerGame,
+    goalsForPerGame:     stats.goalsForPerGame,
+    goalsAgainstPerGame: stats.goalsAgainstPerGame,
+    drawRate:            stats.drawRate,
+  };
+}
+
+// Apply DIVISION_ADJUSTMENT factors to rawStats. Always reads from rawStats, not
+// from previously adjusted values — running the generator twice produces identical output.
+function applyAdjustment(stats, rawStats, adj) {
+  return {
+    ...stats,
+    pointsPerGame:       rawStats.pointsPerGame       * adj.pointsPerGame,
+    homePointsPerGame:   rawStats.homePointsPerGame   * adj.homePointsPerGame,
+    awayPointsPerGame:   rawStats.awayPointsPerGame   * adj.awayPointsPerGame,
+    goalsForPerGame:     rawStats.goalsForPerGame      * adj.goalsForPerGame,
+    goalsAgainstPerGame: rawStats.goalsAgainstPerGame  * adj.goalsAgainstPerGame,
+  };
+}
+
 // League table positions from finished STATS_SEASON matches.
 // Ranks all participants by pts desc, then goal difference desc.
 // Returns Map<teamId, { position, pts, gd, played }>.
@@ -202,33 +255,58 @@ export async function fetchFootballData(forceRefresh = false) {
   const allTeams    = [];
   const allFixtures = [];
 
-  // Cross-competition posMap for newcomer classification (set-membership only, no hard-coded IDs).
-  const posByCode = new Map(results.map(r => [r.competition.code, r.posMap]));
+  // Cross-competition maps for position and statistics look-up (set-membership only, no hard-coded IDs).
+  const posByCode      = new Map(results.map(r => [r.competition.code, r.posMap]));
+  const finishedByCode = new Map(results.map(r => [r.competition.code, r.finished]));
 
   for (const { competition, idToSlug, idToName, upcoming, finished, posMap } of results) {
-    const otherCode   = COMPETITIONS.find(c => c.code !== competition.code)?.code;
-    const otherPosMap = posByCode.get(otherCode);
+    const otherCode     = COMPETITIONS.find(c => c.code !== competition.code)?.code;
+    const otherPosMap   = posByCode.get(otherCode);
+    const otherFinished = finishedByCode.get(otherCode) ?? [];
 
     const teams = [...idToSlug.entries()].map(([teamId, slug]) => {
       const posRow = posMap.get(teamId);
       let position, positionSource;
 
       if (posRow) {
-        // Team appeared in this competition's prior-season finished matches.
         position       = posRow.position;
         positionSource = 'computed';
       } else if (competition.code === 'PL') {
-        // Not in PL 2025/26 → promoted from ELC.
         position       = 18;
         positionSource = 'promoted';
       } else {
-        // ELC newcomer: check whether they were in the PL last season.
         if (otherPosMap?.has(teamId)) {
-          position       = 3;    // was in PL → relegated to ELC; expected to challenge
+          position       = 3;
           positionSource = 'relegated';
         } else {
-          position       = 18;   // in neither prior-season table → from League One
+          position       = 18;
           positionSource = 'promoted';
+        }
+      }
+
+      // Build stats from this competition's finished matches.
+      const stats = buildTeamStats(teamId, finished, today);
+      let finalStats, statsSource, rawStats;
+
+      if (stats.hasStats) {
+        // Team has current-competition data — use as-is.
+        statsSource = 'previous-season';
+        rawStats    = extractRaw(stats);
+        finalStats  = stats;
+      } else {
+        // Try the other competition's finished matches (cross-division merge).
+        const otherStats = buildTeamStats(teamId, otherFinished, today);
+        if (otherStats.hasStats) {
+          // PL teams drawing on ELC data are promoted; ELC teams drawing on PL data are relegated.
+          const direction = competition.code === 'PL' ? 'promoted' : 'relegated';
+          rawStats    = extractRaw(otherStats);
+          statsSource = `${direction}-adjusted`;
+          finalStats  = applyAdjustment(otherStats, rawStats, DIVISION_ADJUSTMENT[direction]);
+        } else {
+          // Neither competition has data (e.g. League One promoted teams).
+          statsSource = 'unavailable';
+          rawStats    = extractRaw(stats);  // all-zero snapshot for uniform shape
+          finalStats  = stats;
         }
       }
 
@@ -238,7 +316,9 @@ export async function fetchFootballData(forceRefresh = false) {
         league:         competition.name,
         position,
         positionSource,
-        ...buildTeamStats(teamId, finished, today),
+        statsSource,
+        rawStats,
+        ...finalStats,
       };
     });
 

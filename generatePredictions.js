@@ -45,6 +45,20 @@ function upsetProb(prediction) {
   return Math.max(probabilities['1'], probabilities['2']);
 }
 
+// Numeric fields that must be finite for a team to be usable.
+const NUMERIC_METRICS = [
+  'pointsPerGame', 'homePointsPerGame', 'awayPointsPerGame',
+  'goalsForPerGame', 'goalsAgainstPerGame', 'drawRate',
+];
+
+// Returns a problem description string if the team cannot be used, null if OK.
+function teamMissing(team, fallbackName) {
+  if (!team)          return `${fallbackName} (not found)`;
+  if (!team.hasStats) return `${team.name} (no stats)`;
+  if (NUMERIC_METRICS.some(k => !isFinite(team[k]))) return `${team.name} (non-finite metric)`;
+  return null;
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
 
@@ -82,19 +96,64 @@ async function main() {
 
     const fixtureResults = [];
     for (const fixture of selected) {
-      if (!teamById[fixture.home] || !teamById[fixture.away]) {
-        console.warn(`Warning: no team data for fixture ${fixture.id} — skipping`);
+      const homeTeam = teamById[fixture.home];
+      const awayTeam = teamById[fixture.away];
+
+      // Pre-prediction validation: both teams must exist and have trusted statistics.
+      const missingH = teamMissing(homeTeam, fixture.home);
+      const missingA = teamMissing(awayTeam, fixture.away);
+      const missing  = [missingH, missingA].filter(Boolean);
+
+      if (missing.length > 0) {
+        fixtureResults.push({
+          id:        String(fixture.id),
+          league:    code,
+          leagueName,
+          date:      fixture.date ?? null,
+          matchday:  fixture.matchday ?? null,
+          homeTeam:  homeTeam?.name ?? fixture.home,
+          awayTeam:  awayTeam?.name ?? fixture.away,
+          status:    'unavailable',
+          reason:    'Insufficient trusted statistics',
+          missing,
+        });
         continue;
       }
+
       const prediction = predictFixture(fixture, teamById);
+
+      // Post-prediction probability sanity: all finite, non-negative, sum ≈ 100%.
+      const p1 = prediction.probabilities['1'];
+      const pX = prediction.probabilities['X'];
+      const p2 = prediction.probabilities['2'];
+      if (![p1, pX, p2].every(p => isFinite(p) && p >= 0) ||
+          Math.abs((p1 + pX + p2) * 100 - 100) > 0.5) {
+        fixtureResults.push({
+          id:        String(fixture.id),
+          league:    code,
+          leagueName,
+          date:      fixture.date ?? null,
+          matchday:  fixture.matchday ?? null,
+          homeTeam:  homeTeam.name,
+          awayTeam:  awayTeam.name,
+          status:    'unavailable',
+          reason:    'Prediction output failed probability sanity check',
+          missing:   [],
+        });
+        continue;
+      }
+
       fixtureResults.push({
         id:                   String(fixture.id),
+        status:               'available',
         league:               code,
         leagueName,
         date:                 fixture.date ?? null,
         matchday:             fixture.matchday ?? null,
-        homeTeam:             teamById[fixture.home].name,
-        awayTeam:             teamById[fixture.away].name,
+        homeTeam:             homeTeam.name,
+        homeStatsSource:      homeTeam.statsSource,
+        awayTeam:             awayTeam.name,
+        awayStatsSource:      awayTeam.statsSource,
         predictedOutcome:     prediction.pick,
         confidence:           parseFloat(prediction.topProbability.toFixed(4)),
         drawProbability:      parseFloat(prediction.probabilities['X'].toFixed(4)),
@@ -104,17 +163,21 @@ async function main() {
       });
     }
 
-    const topPicks = fixtureResults
+    // Summary lists and counts only cover available predictions.
+    const available   = fixtureResults.filter(f => f.status === 'available');
+    const unavailable = fixtureResults.filter(f => f.status === 'unavailable');
+
+    const topPicks = available
       .filter(f => f.couponRecommendation.startsWith('Single'))
       .sort((a, b) => b.confidence - a.confidence)
       .slice(0, 10);
 
-    const drawCandidates = fixtureResults
+    const drawCandidates = available
       .filter(f => f.drawCandidate)
       .sort((a, b) => b.drawProbability - a.drawProbability)
       .slice(0, 10);
 
-    const upsetCandidates = fixtureResults
+    const upsetCandidates = available
       .filter(f => f.predictedOutcome === '1' && f.upsetProbability >= 0.30)
       .sort((a, b) => b.upsetProbability - a.upsetProbability)
       .slice(0, 10);
@@ -127,7 +190,9 @@ async function main() {
       gameweek:    matchday != null ? { [code]: matchday } : {},
       fixtures:    fixtureResults,
       summary: {
-        totalFixtures: fixtureResults.length,
+        totalFixtures:          fixtureResults.length,
+        predictionsGenerated:   available.length,
+        predictionsUnavailable: unavailable.length,
         topPicks,
         drawCandidates,
         upsetCandidates,
@@ -139,7 +204,7 @@ async function main() {
 
     await mkdir(outDir, { recursive: true });
     await writeFile(outFile, JSON.stringify(output, null, 2), 'utf8');
-    console.log(`${code}: ${fixtureResults.length} predictions → data/predictions/${code}/${seasonLabel}.json`);
+    console.log(`${code}: ${fixtureResults.length} fixtures → ${available.length} generated, ${unavailable.length} unavailable → data/predictions/${code}/${seasonLabel}.json`);
   }
 }
 

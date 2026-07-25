@@ -215,36 +215,56 @@ function renderPredictions(predictions) {
 
   predictions.forEach(prediction => {
     const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${LEAGUE_DISPLAY[prediction.fixture.league] || prediction.fixture.league}</td>
-      <td>
-        <strong>${prediction.home.name}</strong> vs <strong>${prediction.away.name}</strong>
-        ${(prediction.fixture.matchday != null || prediction.fixture.date)
-          ? `<span class="match-meta">${prediction.fixture.matchday != null ? `MD ${prediction.fixture.matchday}` : ''}${prediction.fixture.matchday != null && prediction.fixture.date ? ' · ' : ''}${fmtDay(prediction.fixture.date)}</span>`
-          : ''}
-      </td>
-      <td class="percent">${formatPercent(prediction.probabilities["1"])}</td>
-      <td class="percent">${formatPercent(prediction.probabilities["X"])}</td>
-      <td class="percent">${formatPercent(prediction.probabilities["2"])}</td>
-      <td><span class="pick">${prediction.pick}</span></td>
-      <td><span class="conf" data-grade="${prediction.confidence}">${prediction.confidence}</span></td>
-      <td class="coupon">${prediction.couponRec}</td>
-      <td class="why">${prediction.reasons.join("; ")}</td>
-    `;
+    const leagueDisplay = LEAGUE_DISPLAY[prediction.fixture.league] || prediction.fixture.league;
+    const matchMeta = (prediction.fixture.matchday != null || prediction.fixture.date)
+      ? `<span class="match-meta">${prediction.fixture.matchday != null ? `MD ${prediction.fixture.matchday}` : ''}${prediction.fixture.matchday != null && prediction.fixture.date ? ' · ' : ''}${fmtDay(prediction.fixture.date)}</span>`
+      : '';
+
+    if (prediction.status === 'unavailable') {
+      row.className = 'row-unavailable';
+      row.innerHTML = `
+        <td>${leagueDisplay}</td>
+        <td><strong>${prediction.home.name}</strong> vs <strong>${prediction.away.name}</strong>${matchMeta}</td>
+        <td class="percent">—</td>
+        <td class="percent">—</td>
+        <td class="percent">—</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+        <td class="why">${prediction.reasons.join('; ')}</td>
+      `;
+    } else {
+      row.innerHTML = `
+        <td>${leagueDisplay}</td>
+        <td>
+          <strong>${prediction.home.name}</strong> vs <strong>${prediction.away.name}</strong>
+          ${matchMeta}
+        </td>
+        <td class="percent">${formatPercent(prediction.probabilities["1"])}</td>
+        <td class="percent">${formatPercent(prediction.probabilities["X"])}</td>
+        <td class="percent">${formatPercent(prediction.probabilities["2"])}</td>
+        <td><span class="pick">${prediction.pick}</span></td>
+        <td><span class="conf" data-grade="${prediction.confidence}">${prediction.confidence}</span></td>
+        <td class="coupon">${prediction.couponRec}</td>
+        <td class="why">${prediction.reasons.join("; ")}</td>
+      `;
+    }
     tbody.appendChild(row);
   });
 
-  document.querySelector("#totalGames").textContent = predictions.length;
+  // Summary stats describe only available predictions.
+  const available = predictions.filter(p => p.status !== 'unavailable');
+  document.querySelector("#totalGames").textContent = available.length;
 
-  const top = [...predictions].sort((a, b) => b.topProbability - a.topProbability)[0];
+  const top = [...available].sort((a, b) => b.topProbability - a.topProbability)[0];
   document.querySelector("#topPick").textContent = top
     ? `${top.home.name} vs ${top.away.name}: ${top.pick}`
     : "-";
 
-  const avg = predictions.length
-    ? predictions.reduce((sum, p) => sum + p.topProbability, 0) / predictions.length
+  const avg = available.length
+    ? available.reduce((sum, p) => sum + p.topProbability, 0) / available.length
     : 0;
-  document.querySelector("#avgConfidence").textContent = predictions.length ? formatPercent(avg) : "-";
+  document.querySelector("#avgConfidence").textContent = available.length ? formatPercent(avg) : "-";
 }
 
 function setDataSource(text) {
@@ -262,9 +282,12 @@ function applyAndRender() {
     ? (weekGroups.get(state.week) ?? [])
     : loadedPredictions;
 
-  // Confidence filter.
+  // Confidence filter — unavailable predictions always pass through.
   if (state.confidence !== 'all') {
-    predictions = predictions.filter(p => GRADE_ORDER[p.confidence] <= GRADE_ORDER[state.confidence]);
+    predictions = predictions.filter(p =>
+      p.status === 'unavailable' ||
+      GRADE_ORDER[p.confidence] <= GRADE_ORDER[state.confidence]
+    );
   }
 
   renderPredictions(predictions);
@@ -315,9 +338,24 @@ function savedConfidenceLabel(saved) {
 
 // Adapt a predictions.json fixture entry to the shape renderPredictions() expects.
 function transformSaved(saved) {
+  if (saved.status === 'unavailable') {
+    return {
+      status:         'unavailable',
+      fixture:        { league: saved.league, date: saved.date ?? null, matchday: saved.matchday ?? null },
+      home:           { name: saved.homeTeam },
+      away:           { name: saved.awayTeam },
+      probabilities:  null,
+      pick:           null,
+      confidence:     null,
+      topProbability: null,
+      couponRec:      null,
+      reasons:        [saved.reason ?? 'Unavailable'],
+    };
+  }
   const probs = reconstructProbs(saved);
   const conf  = savedConfidenceLabel(saved);
   return {
+    status:         'available',
     fixture:        { league: saved.league, date: saved.date ?? null, matchday: saved.matchday ?? null },
     home:           { name: saved.homeTeam },
     away:           { name: saved.awayTeam },

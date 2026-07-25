@@ -295,6 +295,11 @@ td {
   color: #52657a;
 }
 
+.row-unavailable td {
+  color: #8a9bb0;
+  background: #f9fbfc;
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
